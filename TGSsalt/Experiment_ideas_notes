@@ -1,0 +1,68 @@
+Initial ideas : 
+Relationship between surrounding pixels for score improvement
+
+
+https://arxiv.org/pdf/1702.05174.pdf
+
+Typically image segemenration works in below pipeline:
+
+input - preprocessing - network - post processing - output
+
+Here we can try below techniques:-
+
+Networks: 
+1. patch-based CNN [16],
+2. FCN8 [13], 
+3. UNet [38] and 
+4. FC-ResNets [17], [37], [18].
+
+Preprocessing:
+1. The methods account for gray scale value variability by employing data augmentation (e.g. intensity shifts [38], [37])
+2. data pre-processing (e.g standardization [17] or rescaling [37] or e intensity normalization [8]). 
+3. bias correction [36], [52], [8], [41] and histogram equalization [11]
+4.  clipping[15], applying Gaussian smoothing [29], [10] 
+5. Gaussian noise injection has also been explored as part of data augmentation to account for noise level variability in the CT scans [15].
+
+Post porcessing: 
+1. In [6], a minimum cost multicut approach is introduced
+2. in [18], [13], watershed algorithm is used, while in [37]
+3. median filtering is employed to improve EM segmentation results.
+4. post-processing involving morphological operations [36], [52], conditional random fiels (CRFs) [27], [52] and interpolation [4] are often used to refine
+segmentation maps.
+5. most frequently used post-processing methods include morphological operations [44], [48], [39], CRFs [15] and level sets [10] to refine the segmentation proposals
+
+###### way forward
+
+Best so far is Unet with resent blocks ---- TRY LR RATE SCHEDULE - start neuron 16, 24
+Unet with resent backbone pretrained weights also looks fine - overfitting, try image augumenatation and droputs
+
+Notes- 
+bigger netwroks seems to overfit the training data
+ try data augumentation and dropouts
+
+Cosine learning rate schedule gave good imporvements 
+Try experimenting with loss function and lr schedules
+
+data augumentation - intensity shift, Gaussian noise injection
+preprocessing - standardization, rescaling, intensity normalization, bias correction, histogram equalization, clipping, Gaussian smoothing
+
+Try stcacking results
+training on vaiours folds and then average gave better results
+try stacking - results as channels along with input image and see if we can get better results
+
+threshhold for each fold and then take average ?? - not working
+
+From peter- 
+I used pytorch's pretrained weights
+I read the images as grayscale (1 channel), but for the model I used all 3 channels (simply replicated). sorry for the confusion
+My training loss was 0.349, the validation loss was 0.537 (This was the modified lovasz, I used elu+1 instead of relu). Accuracy: training: .983, valid: .962
+I used +-10 deg rotation
+brightness +-0.08
+For training, I use shift, scale, rotate and some contrast/brightness manipulation.
+
+Try applying sigmoid after the predictions - not working
+
+remove masks less than 10px from predictions - gave 0.002 improvement
+
+
+
