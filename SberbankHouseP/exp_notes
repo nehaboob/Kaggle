@@ -1,0 +1,60 @@
+without macro
+Train error: 0.4226, Test error: 0.4242
+Train error: 0.4410, Test error: 0.3820
+
+with macro
+Train error: 0.4197, Test error: 0.4360
+Train error: 0.4383, Test error: 0.3818
+
+
+with macro- reomve 20% empty
+Train error: 0.4191, Test error: 0.4392
+Train error: 0.4374, Test error: 0.3820
+
+with macro- reomve 10% empty
+Train error: 0.4199, Test error: 0.4355
+Train error: 0.4374, Test error: 0.3814
+
+with macro- reomve 30% empty
+Train error: 0.4208, Test error: 0.4433
+Train error: 0.4360, Test error: 0.3806
+
+with macro remove 20% empty
+remove train 20% empty
+Train error: 0.4227, Test error: 0.4534
+Train error: 0.4398, Test error: 0.3918
+
+with macro remove 20% empty
+remove train 30% empty
+Train error: 0.4226, Test error: 0.4440
+Train error: 0.4400, Test error: 0.3899
+
+with macro remove 20% empty
+remove train 40% empty
+Train error: 0.4232, Test error: 0.4376
+Train error: 0.4388, Test error: 0.3885
+
+with macro remove 20% empty
+remove train 50% empty
+Train error: 0.4191, Test error: 0.4501
+Train error: 0.4372, Test error: 0.3827
+
+with macro remove 30% empty
+remove train 40% empty
+Train error: 0.4221, Test error: 0.4343
+Train error: 0.4393, Test error: 0.3879
+
+with macro remove 40% empty
+remove train 40% empty
+Train error: 0.4221, Test error: 0.4343
+Train error: 0.4393, Test error: 0.3879
+
+with macro remove 40% empty
+remove train 40% empty
+Train error: 0.4076, Test error: 0.4366
+Train error: 0.4294, Test error: 0.3788
+
+with macro remove 40% empty
+remove train 40% empty
+Train error: 0.3799, Test error: 0.4415
+Train error: 0.4060, Test error: 0.3610
