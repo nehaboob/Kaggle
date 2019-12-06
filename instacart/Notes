@@ -1,0 +1,13 @@
+https://www.kaggle.com/c/instacart-market-basket-analysis/discussion/36848
+
+Some basic ideas about this competition compiled from discussions:
+
+    basic model (presented in high voted kernels) is binary classification with logloss over (order, product) pair and 1/0 as target from 'reordered' column on train dataset. You can also try bayesian/rnn/..., but this model is simple and well done.
+
+    Correct CV!!! Mercedes show us that we can't underestimate importance of correct CV scheme. In this competition it is easy - just create folds based on disjointed user_id.
+
+    Treshold to convert probability to 1/0 is the key! Don't use default 0.5 - start with 0.2 and tune it on CV. The more advanced idea is to use different treshold for different orders. I give a link to some topics later.
+
+    Feature engineering. In this competition it is the most important part. You have to read the book from post @Rodolfo Lomascolo ("Repeat Buyer Prediction for E-Commerce") https://www.kaggle.com/c/instacart-market-basket-analysis/discussion/36411
+
+
