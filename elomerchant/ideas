@@ -1,0 +1,190 @@
+1. one hot encodig of features
+2.
+So what you can do with this kind of information. Firstly, the rate of purchase_amount monthly change for (card_id, merchant_id) tuple should be the key features in your models, i.e. average change ratio of (5->4, 4->3, 3->2, 2->1, 1->0); Or features such as sum(future_purchase_amount)/sum(purchase_amount_lag_-1), etc.
+
+This also allows building new intermediate models, like predicting the historic merchant performance in month_lag=1 and month_lag=2 and stacking its predictions to your main model.
+
+These are the most impactful things I can think of right now, but there could always be more!
+
+agg_fun = {'authorized_flag': ['sum', 'mean']}
+auth_mean = historical_transactions.groupby(['card_id']).agg(agg_fun)
+auth_mean.columns = ['_'.join(col).strip() for col in auth_mean.columns.values]
+auth_mean.reset_index(inplace=True)
+
+authorized_transactions = historical_transactions[historical_transactions['authorized_flag'] == 1]
+historical_transactions = historical_transactions[historical_transactions['authorized_flag'] == 0]'''
+
+#######################################################
+
+#skf
+
+[{'loss': 3.6637861974861385, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.8317383765192528, 'learning_rate': 0.017737434292590684, 'min_child_weight': 55, 'min_split_gain': 0.8344359091054111, 'n_estimators': 500, 'num_leaves': 108, 'reg_alpha': 0.631976056367553, 'reg_lambda': 0.14809976115017168, 'subsample_for_bin': 80000.0, 'subsample': 0.9705207205312287}, 'iteration': 25, 'train_time': 270.30958904900035, 'status': 'ok'}, {'loss': 3.6640108244933307, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.9008952136908273, 'learning_rate': 0.019165751475949955, 'min_child_weight': 50, 'min_split_gain': 0.9871253397597747, 'n_estimators': 500, 'num_leaves': 106, 'reg_alpha': 0.652119172013381, 'reg_lambda': 0.12697546116405806, 'subsample_for_bin': 80000.0, 'subsample': 0.8579165648584124}, 'iteration': 26, 'train_time': 254.26317141700565, 'status': 'ok'}]
+
+#wo skf submission_2 lb 3.714
+[{'loss': 3.6596221906888418, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.4696608729293581, 'learning_rate': 0.019648406477396838, 'min_child_weight': 150, 'min_split_gain': 0.8544638101627098, 'n_estimators': 500, 'num_leaves': 103, 'reg_alpha': 0.02208294470801625, 'reg_lambda': 0.16312141580670703, 'subsample_for_bin': 80000.0, 'subsample': 0.986971897809561}, 'iteration': 25, 'train_time': 201.57019731900073, 'status': 'ok'}, {'loss': 3.661644561058777, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.7304794209680953, 'learning_rate': 0.018726976577639234, 'min_child_weight': 190, 'min_split_gain': 0.5724177594576002, 'n_estimators': 400, 'num_leaves': 139, 'reg_alpha': 0.021043167852705894, 'reg_lambda': 0.41536569650740385, 'subsample_for_bin': 60000.0, 'subsample': 0.8898013662259248}, 'iteration': 48, 'train_time': 295.76538752700435, 'status': 'ok'}]
+
+
+#wo skf submission_3   lb 3.712
+[{'loss': 3.657680001738213, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5280580829600932, 'learning_rate': 0.02542002442045519, 'min_child_weight': 190, 'min_split_gain': 0.20497093572652325, 'n_estimators': 800, 'num_leaves': 31, 'reg_alpha': 0.37597391321737705, 'reg_lambda': 0.48275248784662433, 'subsample_for_bin': 80000.0, 'subsample': 0.9649407165167242}, 'iteration': 98, 'train_time': 147.58657270400727, 'status': 'ok'}, {'loss': 3.6578466567139984, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5772732199436047, 'learning_rate': 0.024592916034546525, 'min_child_weight': 190, 'min_split_gain': 0.1797331307420511, 'n_estimators': 700, 'num_leaves': 34, 'reg_alpha': 0.38598406110504935, 'reg_lambda': 0.4825271382037185, 'subsample_for_bin': 80000.0, 'subsample': 0.9655730038091453}, 'iteration': 96, 'train_time': 159.01963702699868, 'status': 'ok'}]
+
+#wo sfk - version 3 files submission_4 lb 3.707
+
+[{'loss': 3.6509893504556974, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.622112233636701, 'learning_rate': 0.013553874205947737, 'min_child_weight': 165, 'min_split_gain': 0.08543778052980536, 'n_estimators': 7700, 'num_leaves': 46, 'reg_alpha': 0.571303439461047, 'reg_lambda': 0.6640191897787435, 'subsample_for_bin': 20000.0, 'subsample': 0.8590325085400071}, 'iteration': 28, 'train_time': 265.0083103280049, 'status': 'ok'}, {'loss': 3.651663314636815, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.780786987397107, 'learning_rate': 0.013865982847592053, 'min_child_weight': 175, 'min_split_gain': 0.07861640696484186, 'n_estimators': 5800, 'num_leaves': 40, 'reg_alpha': 0.298288358337178, 'reg_lambda': 0.41671380426215254, 'subsample_for_bin': 20000.0, 'subsample': 0.8640412536543091}, 'iteration': 27, 'train_time': 306.651995563996, 'status': 'ok'}]
+
+#sfk - version 3 files submission_5 lb 3.707
+[{'loss': 3.6538161755635166, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.8058081869854715, 'learning_rate': 0.010314348777508234, 'min_child_weight': 115, 'min_split_gain': 0.07293136795015401, 'n_estimators': 9100, 'num_leaves': 53, 'reg_alpha': 0.9607421315832196, 'reg_lambda': 0.7712470978023344, 'subsample_for_bin': 200000.0, 'subsample': 0.6193217546304612}, 'iteration': 30, 'train_time': 344.4184689800022, 'status': 'ok'}, {'loss': 3.654427220855439, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5585476312392441, 'learning_rate': 0.019258861244075644, 'min_child_weight': 180, 'min_split_gain': 0.08663826970939789, 'n_estimators': 6000, 'num_leaves': 65, 'reg_alpha': 0.2172697940814146, 'reg_lambda': 0.2622719991067446, 'subsample_for_bin': 140000.0, 'subsample': 0.8934850773791032}, 'iteration': 47, 'train_time': 232.28174505999777, 'status': 'ok'}]
+
+
+#skf version 3 files submission_6 lb 3.704
+
+[{'loss': 3.6523478794203683, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5535958489901252, 'learning_rate': 0.011480510485463133, 'min_child_weight': 90, 'min_split_gain': 0.1867008186817817, 'n_estimators': 8800, 'num_leaves': 52, 'reg_alpha': 0.5270336540445675, 'reg_lambda': 0.13187426264282937, 'subsample_for_bin': 70000.0, 'subsample': 0.8258126057648656}, 'iteration': 72, 'train_time': 269.24734665901633, 'status': 'ok'}, {'loss': 3.6524125520395403, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.6770655150507813, 'learning_rate': 0.012107789796768832, 'min_child_weight': 185, 'min_split_gain': 0.4793641329956536, 'n_estimators': 10000, 'num_leaves': 37, 'reg_alpha': 0.6943567934528225, 'reg_lambda': 0.3543083810211668, 'subsample_for_bin': 100000.0, 'subsample': 0.7744864166977083}, 'iteration': 101, 'train_time': 288.33948109697667, 'status': 'ok'}]
+
+[{'loss': 3.6524044424264854, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5794351726456537, 'learning_rate': 0.010224829327825508, 'min_child_weight': 200, 'min_split_gain': 0.9771543436218656, 'n_estimators': 3100, 'num_leaves': 52, 'reg_alpha': 0.9801236866374567, 'reg_lambda': 0.981404022077038, 'subsample': 0.9583210460952565, 'subsample_for_bin': 80000.0}, 'iteration': 23, 'train_time': 341.99534042700543, 'status': 'ok'}, {'loss': 3.6525666387046005, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5855455185919207, 'learning_rate': 0.010611527043346903, 'min_child_weight': 200, 'min_split_gain': 0.9878235896929253, 'n_estimators': 6600, 'num_leaves': 50, 'reg_alpha': 0.988311958287898, 'reg_lambda': 0.9410812865381134, 'subsample': 0.9897591347031593, 'subsample_for_bin': 90000.0}, 'iteration': 22, 'train_time': 310.1941679479787, 'status': 'ok'}]
+
+#skf version 4 files - without lag features
+
+[{'loss': 3.6522961944949404, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5170233956444398, 'learning_rate': 0.01143545759270505, 'min_child_weight': 200, 'min_split_gain': 0.24720655947734432, 'n_estimators': 8700, 'num_leaves': 31, 'reg_alpha': 0.14446986536955275, 'reg_lambda': 0.8821246705659376, 'subsample': 0.9444712859527173, 'subsample_for_bin': 140000.0}, 'iteration': 179, 'train_time': 111.67774390301201, 'status': 'ok'}, {'loss': 3.6530934759247837, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.566320592951154, 'learning_rate': 0.01019620120001125, 'min_child_weight': 200, 'min_split_gain': 0.14574449747865462, 'n_estimators': 10600, 'num_leaves': 35, 'reg_alpha': 0.354563275461907, 'reg_lambda': 0.867970210222327, 'subsample': 0.9915288205688824, 'subsample_for_bin': 140000.0}, 'iteration': 151, 'train_time': 140.17789550198358, 'status': 'ok'}]
+
+#skf version 5 files - with more features and without lag features
+
+[{'loss': 3.6530092204468447, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.48511730444626755, 'learning_rate': 0.017994199298258226, 'min_child_weight': 130, 'min_split_gain': 0.8391565190123366, 'n_estimators': 4100, 'num_leaves': 65, 'reg_alpha': 0.819698523375572, 'reg_lambda': 0.28549706098506517, 'subsample': 0.8808821188869459, 'subsample_for_bin': 270000.0}, 'iteration': 71, 'train_time': 80.7145075770095, 'status': 'ok'}, {'loss': 3.653151810729286, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.44739638311436936, 'learning_rate': 0.014756886779509698, 'min_child_weight': 185, 'min_split_gain': 0.07355990437212245, 'n_estimators': 7200, 'num_leaves': 36, 'reg_alpha': 0.9825133702223035, 'reg_lambda': 0.6655092070049907, 'subsample': 0.8873632667908287, 'subsample_for_bin': 280000.0}, 'iteration': 105, 'train_time': 87.19217348599341, 'status': 'ok'}]
+
+
+features-
+['feature_1', 'feature_2', 'feature_3', 'hist_card_id_size', 'hist_month_nunique', 'hist_hour_nunique', 'hist_weekofyear_nunique', 'hist_year_nunique', 'hist_month_diff_mean', 'hist_month_diff_nunique', 'hist_weekend_sum', 'hist_weekend_mean', 'hist_merchant_id_nunique', 'hist_merchant_category_id_nunique', 'hist_state_id_nunique', 'hist_city_id_nunique', 'hist_subsector_id_nunique', 'hist_purchase_amount_mean', 'hist_purchase_amount_max', 'hist_purchase_amount_min', 'hist_installments_sum', 'hist_installments_mean', 'hist_installments_max', 'hist_purchase_month_std', 'hist_purchase_date_max', 'hist_month_lag_min', 'hist_month_lag_max', 'hist_month_lag_mean', 'hist_month_lag_std', 'hist_authorized_flag_mean', 'hist_authorized_flag_sum', 'hist_category_1_mean', 'hist_category_1_sum', 'hist_category_2_1.0_mean', 'hist_category_2_2.0_mean', 'hist_category_2_2.0_sum', 'hist_merchant_id_nunique_0', 'hist_merchant_id_count_-10', 'hist_merchant_id_count_-9', 'hist_merchant_id_count_-2', 'hist_merchant_id_count_0', 'hist_state_id_nunique_-5', 'hist_state_id_nunique_-4', 'hist_state_id_nunique_-1', 'hist_state_id_nunique_0', 'hist_subsector_id_nunique_-12', 'hist_purchase_amount_max_-2', 'hist_installments_sum_-6', 'hist_installments_sum_-4', 'hist_installments_sum_0', 'new_card_id_size', 'new_month_nunique', 'new_hour_nunique', 'new_purchase_amount_sum', 'new_purchase_amount_mean', 'new_purchase_amount_max', 'new_purchase_amount_min', 'new_purchase_amount_std', 'new_installments_sum', 'new_purchase_month_mean', 'new_purchase_month_max', 'new_purchase_date_ptp_ptp', 'new_purchase_date_min', 'new_purchase_date_max', 'new_month_lag_min', 'new_month_lag_max', 'new_category_1_mean', 'new_category_1_sum', 'new_category_2_1.0_mean', 'new_category_2_1.0_sum', 'new_category_2_3.0_sum', 'new_category_3_A_sum', 'new_category_3_B_mean']
+
+
+#skf version 6 files - with feature selection submission_7 lb 3.702
+
+[{'loss': 3.646578192565549, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.648160438571269, 'learning_rate': 0.010851387576828717, 'min_child_weight': 145, 'min_split_gain': 0.11603431271605252, 'n_estimators': 10700, 'num_leaves': 50, 'reg_alpha': 0.5616013112843976, 'reg_lambda': 0.3801503947767616, 'subsample': 0.9811948375658974, 'subsample_for_bin': 260000.0}, 'iteration': 148, 'train_time': 101.38067358601256, 'status': 'ok'}, {'loss': 3.646779332750384, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.4489950302629293, 'learning_rate': 0.015340569780328632, 'min_child_weight': 180, 'min_split_gain': 0.3426265245024095, 'n_estimators': 8400, 'num_leaves': 38, 'reg_alpha': 0.14619983278367954, 'reg_lambda': 0.009338268516283665, 'subsample': 0.9818525466651628, 'subsample_for_bin': 180000.0}, 'iteration': 66, 'train_time': 68.62577530901763, 'status': 'ok'}]
+
+#skf version 9 files -- all features 
+params = {'boosting_type': 'gbdt', 'colsample_bytree': 0.5170233956444398, 'learning_rate': 0.01143545759270505, 'min_child_weight': 200, 'min_split_gain': 0.24720655947734432, 'n_estimators': 8700, 'num_leaves': 31, 'reg_alpha': 0.14446986536955275, 'reg_lambda': 0.8821246705659376, 'subsample': 0.9444712859527173, 'subsample_for_bin': 140000.0}
+	    
+
+3.6517
+final_features ['feature_1', 'feature_2', 'feature_3', 'hist_merch_tran_ratio', 'new_installments_max_2', 'hist_subsector_id_nunique_-10', 'new_category_2_5.0_mean', 'hist_month_lag_nunique', 'hist_installments_max_-10', 'hist_weekend_mean', 'dayofweek', 'elapsed_time', 'hist_year_nunique', 'hist_merch_avg_purchases_lag3_max', 'new_merch_purchase_sum_ratio', 'hist_installments_mean_-11', 'hist_subsector_id_nunique_-9', 'hist_purchase_date_uptonow', 'purchase_amount_total', 'hist_purchase_amount_mean_-3', 'hist_installments_mean_-8', 'hist_card_id_size', 'new_month_lag_mean', 'hist_purchase_amount_mean_-2', 'hist_purchase_date_min', 'new_category_3_A_sum', 'new_merchant_category_id_nunique', 'new_merch_avg_sales_lag6_sum', 'hist_merch_avg_sales_lag6_max', 'purchase_amount_sum_-13', 'new_subsector_id_nunique_1', 'new_merch_avg_sales_lag3_std', 'diff_merchant_id_nunique_1_0', 'diff_subsector_id_lag_mean', 'new_merch_most_recent_sales_range_sum', 'hist_purchase_amount_max_-8', 'hist_merchant_id_count_-1', 'hist_category_3_B_sum', 'new_merch_numerical_2_min', 'new_merch_avg_sales_lag12_sum', 'diff_subsector_id_nunique_5_4', 'diff_purchase_sum_10_9', 'new_purchase_amount_min_2', 'hist_subsector_id_nunique_0', 'hist_installments_std_-6', 'hist_merchant_category_id_nunique_-7', 'hist_purchase_amount_sum_-1', 'hist_merchant_id_nunique_-9', 'hist_installments_mean_-12', 'new_purchase_mean_month_diff', 'hist_subsector_id_nunique_-6', 'hist_merch_most_recent_sales_range_mean', 'hist_installments_max_0', 'hist_purchase_amount_min', 'hist_merchant_id_nunique_-3', 'hist_merch_numerical_2_mean', 'diff_merchant_id_nunique_4_3', 'hist_purchase_amount_mean_-1', 'hist_merchant_id_nunique_-10', 'hist_installments_mean_-3', 'hist_installments_sum_0', 'hist_purchase_amount_mean_-5', 'hist_category_2_1.0_mean', 'hist_installments_sum_-6', 'new_purchase_date_ptp_ptp', 'new_purchase_amount_max_2', 'hist_authorized_flag_mean', 'hist_purchase_amount_sum_-10', 'hist_merchant_category_id_nunique_-3', 'new_city_id_nunique', 'hist_merch_avg_sales_lag3_mean', 'new_purchase_amount_max', 'hist_purchase_amount_min_-8', 'hist_merchant_category_id_nunique_-5', 'new_purchase_date_max', 'new_month_diff_nunique', 'hist_merch_avg_purchases_lag12_max', 'hist_merchant_id_nunique_-4', 'new_category_1_sum', 'hist_merchant_category_id_nunique_-9', 'hist_category_1_mean', 'hist_merchant_id_count_-9', 'hist_subsector_id_nunique_-11', 'merch_purchase_diff_4_5', 'new_first_buy']
+
+v9 skf with forward selected features - 3.6517
+v9 all features skf 3.653165185073446
+v9 100 features skf test RMSE -  3.651156844689161 train RMSE -  3.4338306287943148
+v9 162 union features skf test RMSE -  3.650707231069159 train RMSE -  3.4150562934439876
+
+v9 all features non skf test RMSE -  3.6542393814352394 train RMSE -  3.438252665491526
+v9 100 features non skf test RMSE -  3.650287871429718 train RMSE -  3.4340709284652036
+
+
+# conclude - lgbm feature selection is better than forward selection 
+
+
+# selection of optimal number of features using sfk 
+10 test RMSE -  3.7163989385484126 train RMSE -  3.6489993245936794
+20 test RMSE -  3.6872383507243947 train RMSE -  3.549476745661635
+30 test RMSE -  3.6604714474765165 train RMSE -  3.505276995002415
+40 test RMSE -  3.6535347229993724 train RMSE -  3.463961333305015
+50 test RMSE -  3.652037171139201 train RMSE -  3.450387548614736
+60 test RMSE -  3.6511087442646177 train RMSE -  3.456567140978746
+65 test RMSE -  3.6514815694556617 train RMSE -  3.4383667982946564
+70 test RMSE -  3.6507969548582127 train RMSE -  3.438410396973802
+75 test RMSE -  3.651081810288001 train RMSE -  3.445693434512458
+85 test RMSE -  3.6513773287368956 train RMSE -  3.440338040753757
+90 test RMSE -  3.652261008542996 train RMSE -  3.464058106550997
+110 test RMSE -  3.651670095245268 train RMSE -  3.4266045699946424
+130 test RMSE -  3.6536629593589214 train RMSE -  3.4364495549929126
+150 test RMSE -  3.653673470123371 train RMSE -  3.438502341793991
+170 test RMSE -  3.654197602499306 train RMSE -  3.449207170175016
+
+# selection of optimal number of features using non-sfk but feature list is taken from skf :(
+70 test RMSE -  3.6512284961835455 train RMSE -  3.4513077044022027
+90 test RMSE -  3.6516959937442706 train RMSE -  3.446150391757603
+110 test RMSE -  3.6517284506527643 train RMSE -  3.437294921444775
+130 test RMSE -  3.65210418794372 train RMSE -  3.416580269743964
+
+162 union features - test RMSE -  3.6497950904601706 train RMSE -  3.4250002449402244
+
+submission_10 lb 3.707
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5170233956444398, 'learning_rate': 0.01143545759270505, 'min_child_weight': 200, 'min_split_gain': 0.24720655947734432, 'n_estimators': 8700, 'num_leaves': 31, 'reg_alpha': 0.14446986536955275, 'reg_lambda': 0.8821246705659376, 'subsample': 0.9444712859527173, 'subsample_for_bin': 140000.0}
+[LightGBM] [Warning] Unknown parameter categorical_column=
+test RMSE -  3.6497950904601706 train RMSE -  3.425000244940224
+    
+# conclude 162 combine features are better
+
+[CV]  colsample_bytree=0.6, early_stopping_rounds=100, max_depth=4, n_estimators=1000, num_leaves=15, subsample=1.0, score=-13.324723991301894, total=  12.9s
+[CV]  colsample_bytree=0.6, early_stopping_rounds=100, max_depth=4, n_estimators=1000, num_leaves=31, subsample=1.0, score=-13.323573486517244, total=  12.7s
+[CV]  colsample_bytree=0.6, early_stopping_rounds=100, max_depth=4, n_estimators=1000, num_leaves=63, subsample=1.0, score=-13.323573486517244, total=  12.2s
+[CV]  colsample_bytree=0.6, early_stopping_rounds=100, max_depth=4, n_estimators=1000, num_leaves=127, subsample=1.0, score=-13.323573486517244, total=  12.8s
+
+# simple grid search not working
+submission_11 lb 3.705
+
+[{'loss': 3.648603927368613, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.6747020878192473, 'learning_rate': 0.01028946844855269, 'max_depth': 8, 'min_child_weight': 125, 'min_split_gain': 0.4478927896823448, 'n_estimators': 5000, 'num_leaves': 44, 'subsample': 0.7664331423300333, 'subsample_for_bin': 300000.0}, 'iteration': 1, 'train_time': 222.52801040600752, 'status': 'ok'}, {'loss': 3.6507631070382294, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.655354421667673, 'learning_rate': 0.012602456087666471, 'max_depth': -1, 'min_child_weight': 65, 'min_split_gain': 0.560545642457214, 'n_estimators': 5000, 'num_leaves': 50, 'subsample': 0.8995581655934168, 'subsample_for_bin': 120000.0}, 'iteration': 49, 'train_time': 184.44691980304196, 'status': 'ok'}]
+
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.535712909304669, 'learning_rate': 0.01321665632332437, 'max_depth': 7, 'min_child_weight': 135, 'min_split_gain': 0.894606912263939, 'n_estimators': 5000, 'num_leaves': 60, 'subsample': 0.5865114004925476, 'subsample_for_bin': 70000.0}
+test RMSE -  3.649389871886584 train RMSE -  3.4251797360041087
+
+# good last one 3.64899 lb 3.706
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5146962995407758, 'learning_rate': 0.012362408257744631, 'max_depth': 7, 'min_child_weight': 145, 'min_split_gain': 0.8645744164929342, 'n_estimators': 5000, 'num_leaves': 55, 'subsample': 0.739420658143976, 'subsample_for_bin': 300000.0}
+
+
+[{'loss': 3.647486400069175, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5591500523406365, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 70, 'min_split_gain': 0.751068907542556, 'n_estimators': 8000, 'num_leaves': 50, 'subsample': 0.7466608071515193, 'subsample_for_bin': 320000.0}, 'iteration': 48, 'train_time': 218.90811991802184, 'status': 'ok'}, {'loss': 3.6478070614258096, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5328640436513024, 'learning_rate': 0.007291193612704089, 'max_depth': 8, 'min_child_weight': 80, 'min_split_gain': 0.9430637956315739, 'n_estimators': 8000, 'num_leaves': 60, 'subsample': 0.7206327909797919, 'subsample_for_bin': 190000.0}, 'iteration': 81, 'train_time': 223.00734158896375, 'status': 'ok'}]
+
+[{'loss': 3.6475188887007186, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5001361247827644, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 145, 'min_split_gain': 0.680799532489138, 'n_estimators': 10000, 'num_leaves': 80, 'subsample': 0.7391096772075721, 'subsample_for_bin': 30000.0}, 'iteration': 30, 'train_time': 210.41103101999033, 'status': 'ok'}, {'loss': 3.647636573703997, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.44006603718821186, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 90, 'min_split_gain': 0.8258820700989176, 'n_estimators': 10000, 'num_leaves': 80, 'subsample': 0.8857279206345009, 'subsample_for_bin': 100000.0}, 'iteration': 7, 'train_time': 219.08702309598448, 'status': 'ok'}]
+
+
+[{'boosting_type': 'gbdt', 'colsample_bytree': 0.6747020878192473, 'learning_rate': 0.01028946844855269, 'max_depth': 8, 'min_child_weight': 125, 'min_split_gain': 0.4478927896823448, 'n_estimators': 5000, 'num_leaves': 44, 'subsample': 0.7664331423300333, 'subsample_for_bin': 300000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.655354421667673, 'learning_rate': 0.012602456087666471, 'max_depth': -1, 'min_child_weight': 65, 'min_split_gain': 0.560545642457214, 'n_estimators': 5000, 'num_leaves': 50, 'subsample': 0.8995581655934168, 'subsample_for_bin': 120000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5146962995407758, 'learning_rate': 0.012362408257744631, 'max_depth': 7, 'min_child_weight': 145, 'min_split_gain': 0.8645744164929342, 'n_estimators': 5000, 'num_leaves': 55, 'subsample': 0.739420658143976, 'subsample_for_bin': 300000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5591500523406365, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 70, 'min_split_gain': 0.751068907542556, 'n_estimators': 8000, 'num_leaves': 50, 'subsample': 0.7466608071515193, 'subsample_for_bin': 320000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5328640436513024, 'learning_rate': 0.007291193612704089, 'max_depth': 8, 'min_child_weight': 80, 'min_split_gain': 0.9430637956315739, 'n_estimators': 8000, 'num_leaves': 60, 'subsample': 0.7206327909797919, 'subsample_for_bin': 190000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5001361247827644, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 145, 'min_split_gain': 0.680799532489138, 'n_estimators': 10000, 'num_leaves': 80, 'subsample': 0.7391096772075721, 'subsample_for_bin': 30000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.44006603718821186, 'learning_rate': 0.008174653532391328, 'max_depth': 9, 'min_child_weight': 90, 'min_split_gain': 0.8258820700989176, 'n_estimators': 10000, 'num_leaves': 80, 'subsample': 0.8857279206345009, 'subsample_for_bin': 100000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.5170233956444398, 'learning_rate': 0.01143545759270505, 'min_child_weight': 200, 'min_split_gain': 0.24720655947734432, 'n_estimators': 8700, 'num_leaves': 31, 'reg_alpha': 0.14446986536955275, 'reg_lambda': 0.8821246705659376, 'subsample': 0.9444712859527173, 'subsample_for_bin': 140000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.648160438571269, 'learning_rate': 0.010851387576828717, 'min_child_weight': 145, 'min_split_gain': 0.11603431271605252, 'n_estimators': 10700, 'num_leaves': 50, 'reg_alpha': 0.5616013112843976, 'reg_lambda': 0.3801503947767616, 'subsample': 0.9811948375658974, 'subsample_for_bin': 260000.0},
+{'boosting_type': 'gbdt', 'colsample_bytree': 0.4489950302629293, 'learning_rate': 0.015340569780328632, 'min_child_weight': 180, 'min_split_gain': 0.3426265245024095, 'n_estimators': 8400, 'num_leaves': 38, 'reg_alpha': 0.14619983278367954, 'reg_lambda': 0.009338268516283665, 'subsample': 0.9818525466651628, 'subsample_for_bin': 180000.0}]
+
+
+only exp_predictions_stk_1 files
+[{'loss': 3.6469246710051766, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.6980836472792435, 'learning_rate': 0.014212783636068493, 'max_depth': 4, 'min_child_weight': 110, 'min_split_gain': 0.11299888300604582, 'n_estimators': 10000, 'num_leaves': 45, 'subsample': 0.5177477902629838, 'subsample_for_bin': 310000.0}, 'iteration': 48, 'train_time': 7.236473792989273, 'status': 'ok'}, {'loss': 3.647040174753906, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5942974849312713, 'learning_rate': 0.009680837120621502, 'max_depth': 4, 'min_child_weight': 70, 'min_split_gain': 0.5702027139578999, 'n_estimators': 10000, 'num_leaves': 50, 'subsample': 0.4841751500254988, 'subsample_for_bin': 280000.0}, 'iteration': 34, 'train_time': 10.70088256301824, 'status': 'ok'}]
+{'colsample_by_tree': 0.6980836472792435, 'learning_rate': 0.014212783636068493, 'max_depth': 1, 'min_child_weight': 110.0, 'min_split_gain': 0.11299888300604582, 'num_leaves': 45.0, 'subsample': 0.5177477902629838, 'subsample_for_bin': 310000.0}
+
+only exp_predictions_stk_1 files two times
+[{'loss': 3.646634851397039, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.38692642811301886, 'learning_rate': 0.02316961920179069, 'max_depth': 4, 'min_child_weight': 135, 'min_split_gain': 0.20930721168676192, 'n_estimators': 10000, 'num_leaves': 50, 'subsample': 0.8162503941956757, 'subsample_for_bin': 150000.0}, 'iteration': 78, 'train_time': 5.756404285959434, 'status': 'ok'}, {'loss': 3.6467458293162407, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.26286562018699633, 'learning_rate': 0.02002067709714247, 'max_depth': 4, 'min_child_weight': 145, 'min_split_gain': 0.38266118407292765, 'n_estimators': 10000, 'num_leaves': 45, 'subsample': 0.7991690128831666, 'subsample_for_bin': 50000.0}, 'iteration': 66, 'train_time': 6.086353613995016, 'status': 'ok'}]
+
+
+only exp_predictions_stk_1 and exp_predictions_stk_2 files
+[{'loss': 3.6455134086791774, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5582151163156897, 'learning_rate': 0.019132067263604936, 'max_depth': 3, 'min_child_weight': 110, 'min_split_gain': 0.7952017261253221, 'n_estimators': 10000, 'num_leaves': 35, 'subsample': 0.45158253684521193, 'subsample_for_bin': 120000.0}, 'iteration': 84, 'train_time': 9.564958561037201, 'status': 'ok'}, {'loss': 3.645825629997126, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.7884570726083263, 'learning_rate': 0.009572635189321343, 'max_depth': 3, 'min_child_weight': 105, 'min_split_gain': 0.8395313363519981, 'n_estimators': 10000, 'num_leaves': 25, 'subsample': 0.2655729240914637, 'subsample_for_bin': 60000.0}, 'iteration': 66, 'train_time': 11.93550255295122, 'status': 'ok'}]
+{'colsample_by_tree': 0.5582151163156897, 'learning_rate': 0.019132067263604936, 'max_depth': 0, 'min_child_weight': 110.0, 'min_split_gain': 0.7952017261253221, 'num_leaves': 35.0, 'subsample': 0.45158253684521193, 'subsample_for_bin': 120000.0}
+
+only exp_predictions_stk_1, 2, 3, 4, 5, 6 files
+[{'loss': 3.645249547992889, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.7467125399802856, 'learning_rate': 0.024307498889781527, 'max_depth': 4, 'min_child_weight': 110, 'min_split_gain': 0.49182954458436046, 'n_estimators': 10000, 'num_leaves': 35, 'subsample': 0.4208941130155649, 'subsample_for_bin': 370000.0}, 'iteration': 13, 'train_time': 9.680801535025239, 'status': 'ok'}, {'loss': 3.6452822055779164, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.6431814166423643, 'learning_rate': 0.02223933753334089, 'max_depth': 3, 'min_child_weight': 105, 'min_split_gain': 0.25201007878228027, 'n_estimators': 10000, 'num_leaves': 40, 'subsample': 0.4035361147737485, 'subsample_for_bin': 80000.0}, 'iteration': 84, 'train_time': 9.414150113007054, 'status': 'ok'}]
+
+only exp_predictions_stk_1, 2, 3, 4, 5, 6, 7, 8 and mean files
+[{'loss': 3.6436825179488124, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.9668499659143943, 'learning_rate': 0.010004919352668468, 'max_depth': 3, 'min_child_weight': 85, 'min_split_gain': 0.1784548857106189, 'n_estimators': 10000, 'num_leaves': 30, 'subsample': 0.2515335599251403, 'subsample_for_bin': 170000.0}, 'iteration': 69, 'train_time': 15.246764026000164, 'status': 'ok'}, {'loss': 3.6437614932187397, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.8905779328365151, 'learning_rate': 0.02455037385894101, 'max_depth': 3, 'min_child_weight': 105, 'min_split_gain': 0.46467186703444757, 'n_estimators': 10000, 'num_leaves': 25, 'subsample': 0.3151972305337197, 'subsample_for_bin': 130000.0}, 'iteration': 39, 'train_time': 9.362191613006871, 'status': 'ok'}]
+
+
+9, 10 - version 2
+11, 12, 13, 14 version 3
+
+only exp_predictions_stk_1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 and mean files
+[{'loss': 3.6435613354956757, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.9841685723726121, 'learning_rate': 0.010218875710851229, 'max_depth': 3, 'min_child_weight': 70, 'min_split_gain': 0.538713977318102, 'n_estimators': 10000, 'num_leaves': 20, 'subsample': 0.2422253223368201, 'subsample_for_bin': 110000.0}, 'iteration': 82, 'train_time': 13.867386845988221, 'status': 'ok'}, {'loss': 3.6436195073548237, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.9019377899288916, 'learning_rate': 0.010662888254740054, 'max_depth': 3, 'min_child_weight': 75, 'min_split_gain': 0.45144590427477715, 'n_estimators': 10000, 'num_leaves': 50, 'subsample': 0.25134111371610807, 'subsample_for_bin': 130000.0}, 'iteration': 77, 'train_time': 13.637904622009955, 'status': 'ok'}]
+{'colsample_by_tree': 0.9841685723726121, 'learning_rate': 0.010218875710851229, 'max_depth': 0, 'min_child_weight': 70.0, 'min_split_gain': 0.538713977318102, 'num_leaves': 20.0, 'subsample': 0.2422253223368201, 'subsample_for_bin': 110000.0}
+
+[{'loss': 3.6439139232640345, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.721422865138973, 'learning_rate': 0.014511416660936213, 'max_depth': 3, 'min_child_weight': 85, 'min_split_gain': 0.4025783051810908, 'n_estimators': 10000, 'num_leaves': 25, 'subsample': 0.4280973595933636, 'subsample_for_bin': 210000.0}, 'iteration': 91, 'train_time': 12.295256455021445, 'status': 'ok'}, {'loss': 3.643993542590493, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.628409498096143, 'learning_rate': 0.007537221803015219, 'max_depth': 4, 'min_child_weight': 90, 'min_split_gain': 0.7856883625416206, 'n_estimators': 10000, 'num_leaves': 20, 'subsample': 0.4138636962509846, 'subsample_for_bin': 200000.0}, 'iteration': 26, 'train_time': 18.36361748899799, 'status': 'ok'}]
+
+[{'loss': 3.643466629293467, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.8833846162363688, 'learning_rate': 0.02133075537776159, 'max_depth': 3, 'min_child_weight': 105, 'min_split_gain': 0.1942806586355228, 'n_estimators': 10000, 'num_leaves': 25, 'subsample': 0.3670028128957203, 'subsample_for_bin': 400000.0}, 'iteration': 50, 'train_time': 10.011652740009595, 'status': 'ok'}, {'loss': 3.6436691277147952, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.737080009636438, 'learning_rate': 0.02030410990226958, 'max_depth': 3, 'min_child_weight': 125, 'min_split_gain': 0.2860088756114833, 'n_estimators': 10000, 'num_leaves': 25, 'subsample': 0.25140395912565894, 'subsample_for_bin': 150000.0}, 'iteration': 68, 'train_time': 9.64247051696293, 'status': 'ok'}]
+
+only exp_predictions_stk_1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and mean files
+[{'loss': 3.643704927034487, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.9544177541376153, 'learning_rate': 0.013555101873525446, 'max_depth': 3, 'min_child_weight': 60, 'min_split_gain': 0.1696628451303018, 'n_estimators': 10000, 'num_leaves': 20, 'subsample': 0.24906630810104263, 'subsample_for_bin': 380000.0}, 'iteration': 93, 'train_time': 12.459129875001963, 'status': 'ok'}, {'loss': 3.6438252120097303, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.8668861208667509, 'learning_rate': 0.019913984110424006, 'max_depth': 3, 'min_child_weight': 60, 'min_split_gain': 0.26521350050778586, 'n_estimators': 10000, 'num_leaves': 20, 'subsample': 0.16587535201009887, 'subsample_for_bin': 220000.0}, 'iteration': 89, 'train_time': 8.131718110991642, 'status': 'ok'}]
+
+
+[{'loss': 3.64382426739149, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.4595424053123319, 'learning_rate': 0.010199076640043936, 'max_depth': 4, 'min_child_weight': 135, 'min_split_gain': 0.4877878546314819, 'n_estimators': 10000, 'num_leaves': 50, 'subsample': 0.4625471056576811, 'subsample_for_bin': 30000.0}, 'iteration': 37, 'train_time': 19.258500904019456, 'status': 'ok'}, {'loss': 3.64402846356048, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.6290643576389787, 'learning_rate': 0.011887037248525096, 'max_depth': 5, 'min_child_weight': 85, 'min_split_gain': 0.8510561726639299, 'n_estimators': 10000, 'num_leaves': 45, 'subsample': 0.411331908083946, 'subsample_for_bin': 50000.0}, 'iteration': 70, 'train_time': 16.214315049001016, 'status': 'ok'}]
+
+only exp_predictions_stk_1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 and 15 and mean 
+
+[{'loss': 3.6440874264150542, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.5253204571380712, 'learning_rate': 0.016501675625172036, 'max_depth': 3, 'min_child_weight': 50, 'min_split_gain': 0.8844646326486768, 'n_estimators': 10000, 'num_leaves': 30, 'subsample': 0.6098579393294647, 'subsample_for_bin': 250000.0}, 'iteration': 25, 'train_time': 14.025502491975203, 'status': 'ok'}, {'loss': 3.6441411643677877, 'params': {'boosting_type': 'gbdt', 'colsample_bytree': 0.509536958166093, 'learning_rate': 0.022326907907634787, 'max_depth': 4, 'min_child_weight': 80, 'min_split_gain': 0.23576311107879294, 'n_estimators': 10000, 'num_leaves': 40, 'subsample': 0.37376810620360634, 'subsample_for_bin': 290000.0}, 'iteration': 75, 'train_time': 15.766649120952934, 'status': 'ok'}]
+{'colsample_by_tree': 0.5253204571380712, 'learning_rate': 0.016501675625172036, 'max_depth': 0, 'min_child_weight': 50.0, 'min_split_gain': 0.8844646326486768, 'num_leaves': 30.0, 'subsample': 0.6098579393294647, 'subsample_for_bin': 250000.0}
+
+
+30 normal + 5 best + 2 model selection 
++try adding best features
+http://dramanice.su/watch-video-romance-is-a-bonus-book-episode-10-english-sub/

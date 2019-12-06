@@ -1,0 +1,1200 @@
+python src/models/feature_selection.py reg
+2019-02-24 23:25:35,208 - __main__ - INFO - building features and target variable
+test RMSE -  3.847409337596754 test adj r2 -  0.0015799602880501862 train RMSE -  3.844028191807299
+new_installments_max_2
+test RMSE -  3.844656090614626 test adj r2 -  0.00300347118871247 train RMSE -  3.839788228268219
+added to final_features
+hist_subsector_id_nunique_-10
+test RMSE -  3.8430036437564974 test adj r2 -  0.0038553787359028036 train RMSE -  3.834709335616131
+added to final_features
+hist_month_lag_mean
+test RMSE -  3.8430036437564974 test adj r2 -  0.0038504451043100962 train RMSE -  3.834709335616131
+new_category_2_5.0_mean
+test RMSE -  3.8416336391360137 test adj r2 -  0.004560559567372335 train RMSE -  3.831776676068391
+added to final_features
+hist_month_lag_nunique
+test RMSE -  3.83208141280016 test adj r2 -  0.009499821961492128 train RMSE -  3.8161285046458318
+added to final_features
+hist_installments_max_-10
+test RMSE -  3.8316052268831187 test adj r2 -  0.009741067200414344 train RMSE -  3.814595386756738
+added to final_features
+hist_weekend_mean
+test RMSE -  3.830881909816322 test adj r2 -  0.010110004461192257 train RMSE -  3.8087258394402426
+added to final_features
+purchase_amount_sum_-11
+test RMSE -  3.8310585523306266 test adj r2 -  0.010013811213789081 train RMSE -  3.8071081867418415
+dayofweek
+test RMSE -  3.8190622245030066 test adj r2 -  0.016204060997127012 train RMSE -  3.7795116168261926
+added to final_features
+elapsed_time
+test RMSE -  3.8037674782893265 test adj r2 -  0.024063345859149377 train RMSE -  3.754435616383122
+added to final_features
+hist_year_nunique
+test RMSE -  3.7744444406932613 test adj r2 -  0.039047474273515625 train RMSE -  3.7104668268997982
+added to final_features
+hist_merch_avg_purchases_lag3_max
+test RMSE -  3.7697019541173113 test adj r2 -  0.04145603096804984 train RMSE -  3.706496916791456
+added to final_features
+new_merch_purchase_sum_ratio
+test RMSE -  3.749603113277111 test adj r2 -  0.051645383074474416 train RMSE -  3.6693223785003113
+added to final_features
+hist_installments_mean_-11
+test RMSE -  3.746898211149493 test adj r2 -  0.053008454082939305 train RMSE -  3.6714090872376453
+added to final_features
+new_merch_active_months_lag3_mean
+test RMSE -  3.7470064808040697 test adj r2 -  0.052949034425559205 train RMSE -  3.6669708043895235
+hist_subsector_id_nunique_-9
+test RMSE -  3.7457953846021037 test adj r2 -  0.05356114143592905 train RMSE -  3.664902250190528
+added to final_features
+hist_purchase_date_uptonow
+test RMSE -  3.7400457752494636 test adj r2 -  0.056459711248855626 train RMSE -  3.6612005659088793
+added to final_features
+hist_merch_active_months_lag6_min
+test RMSE -  3.740532885835495 test adj r2 -  0.05620924373314573 train RMSE -  3.658897063539116
+hist_purchase_amount_mean_-6
+test RMSE -  3.7401165383828503 test adj r2 -  0.05641933305487523 train RMSE -  3.6497759795456766
+purchase_amount_total
+test RMSE -  3.7373884470765977 test adj r2 -  0.057795351887008795 train RMSE -  3.6449702207721346
+added to final_features
+hist_purchase_amount_mean_-3
+test RMSE -  3.7366987327205776 test adj r2 -  0.05813841204652892 train RMSE -  3.6453625055745276
+added to final_features
+hist_installments_mean_-8
+test RMSE -  3.7332719857184737 test adj r2 -  0.05986043548564368 train RMSE -  3.6303026174766684
+added to final_features
+hist_card_id_size
+test RMSE -  3.7299248809613537 test adj r2 -  0.061540815805591564 train RMSE -  3.6216567189402062
+added to final_features
+diff_purchase_sum_7_6
+test RMSE -  3.730944366672643 test adj r2 -  0.06102308413243496 train RMSE -  3.6106648540245834
+new_month_lag_mean
+test RMSE -  3.7158828844346745 test adj r2 -  0.06858891036592596 train RMSE -  3.5827329743840304
+added to final_features
+hist_merch_most_recent_purchases_range_min
+test RMSE -  3.716155787401842 test adj r2 -  0.06844748131576428 train RMSE -  3.5912409631285014
+hist_purchase_amount_mean_-2
+test RMSE -  3.714772394567199 test adj r2 -  0.0691409200648141 train RMSE -  3.5838410591720207
+added to final_features
+hist_purchase_date_min
+test RMSE -  3.714208105392082 test adj r2 -  0.06941909191527385 train RMSE -  3.571634156955129
+added to final_features
+new_category_3_A_sum
+test RMSE -  3.7072114743399562 test adj r2 -  0.07291715707569946 train RMSE -  3.573761795096953
+added to final_features
+new_merchant_category_id_nunique
+test RMSE -  3.703030884421428 test adj r2 -  0.07500232283308206 train RMSE -  3.567810843711208
+added to final_features
+diff_purchase_sum_6_5
+test RMSE -  3.704025389413814 test adj r2 -  0.07450082766386346 train RMSE -  3.5555191347861252
+new_merch_avg_sales_lag6_sum
+test RMSE -  3.702404524356458 test adj r2 -  0.07531063909375357 train RMSE -  3.562644064045152
+added to final_features
+hist_merch_avg_sales_lag6_max
+test RMSE -  3.7022678150518913 test adj r2 -  0.07537434525797537 train RMSE -  3.5654087366430813
+added to final_features
+purchase_amount_sum_-13
+test RMSE -  3.7007619528115905 test adj r2 -  0.07612178146669779 train RMSE -  3.5491203350123692
+added to final_features
+new_subsector_id_nunique_1
+test RMSE -  3.7000850266625562 test adj r2 -  0.07645515897569677 train RMSE -  3.5564170154201813
+added to final_features
+hist_purchase_amount_mean_-10
+test RMSE -  3.7002435776339944 test adj r2 -  0.07637143330162544 train RMSE -  3.5609868888128036
+new_merch_avg_sales_lag3_std
+test RMSE -  3.699778755877234 test adj r2 -  0.07660346974915588 train RMSE -  3.555950893481898
+added to final_features
+diff_merchant_id_nunique_1_0
+test RMSE -  3.6976830737140327 test adj r2 -  0.07764469196093582 train RMSE -  3.5544586116519055
+added to final_features
+diff_subsector_id_lag_mean
+test RMSE -  3.6972817792368526 test adj r2 -  0.07784031223146781 train RMSE -  3.5493567444034952
+added to final_features
+new_merch_most_recent_sales_range_sum
+test RMSE -  3.6965945942474794 test adj r2 -  0.07817850352407296 train RMSE -  3.5457262057629855
+added to final_features
+new_merch_active_months_lag12_mean
+test RMSE -  3.697183381752173 test adj r2 -  0.07788026007535442 train RMSE -  3.535302145770289
+new_merch_avg_purchases_lag3_sum
+test RMSE -  3.6970437167652097 test adj r2 -  0.0779499268435987 train RMSE -  3.528064122657958
+diff_purchase_sum_4_3
+test RMSE -  3.697308467299807 test adj r2 -  0.07781786349290887 train RMSE -  3.536106071718643
+hist_purchase_amount_max_-8
+test RMSE -  3.6965772130767354 test adj r2 -  0.07818260606239957 train RMSE -  3.534454637488202
+added to final_features
+hist_purchase_month_std
+test RMSE -  3.6973839202597043 test adj r2 -  0.0777756559956122 train RMSE -  3.540752155059379
+hist_merchant_id_count_-1
+test RMSE -  3.6956802055714846 test adj r2 -  0.07862536227276562 train RMSE -  3.5437850194037877
+added to final_features
+hist_category_3_B_sum
+test RMSE -  3.691786715767415 test adj r2 -  0.08056116681115288 train RMSE -  3.544864187210551
+added to final_features
+new_merch_numerical_2_min
+test RMSE -  3.6910092617771006 test adj r2 -  0.08094382306256787 train RMSE -  3.5379356062472143
+added to final_features
+new_merch_numerical_1_mean
+test RMSE -  3.691223636195946 test adj r2 -  0.08083250899099037 train RMSE -  3.5379638047836686
+new_merch_avg_sales_lag12_sum
+test RMSE -  3.6908073562652723 test adj r2 -  0.08103981661655146 train RMSE -  3.526317298577345
+added to final_features
+diff_subsector_id_nunique_5_4
+test RMSE -  3.6906348980130312 test adj r2 -  0.08112114236847734 train RMSE -  3.528703665933931
+added to final_features
+diff_purchase_sum_10_9
+test RMSE -  3.6904374325666596 test adj r2 -  0.08121491672427383 train RMSE -  3.539587168482408
+added to final_features
+new_category_3_B_mean
+test RMSE -  3.690886749089452 test adj r2 -  0.08098662365540554 train RMSE -  3.537362931684103
+new_purchase_amount_min_2
+test RMSE -  3.68988648438577 test adj r2 -  0.08148467853570629 train RMSE -  3.532868022950818
+added to final_features
+hist_merchant_id_count_-10
+test RMSE -  3.68997862488298 test adj r2 -  0.0814342550846533 train RMSE -  3.525567683200793
+hist_subsector_id_nunique_0
+test RMSE -  3.68728980652421 test adj r2 -  0.0827724506790326 train RMSE -  3.5261159489288536
+added to final_features
+hist_installments_std_-6
+test RMSE -  3.6872293932116844 test adj r2 -  0.08279796303824682 train RMSE -  3.529110856471737
+added to final_features
+hist_merchant_category_id_nunique_-7
+test RMSE -  3.686588322712023 test adj r2 -  0.08311232723350448 train RMSE -  3.5145484781144334
+added to final_features
+new_category_3_C_mean
+test RMSE -  3.687457688886824 test adj r2 -  0.08267529373575433 train RMSE -  3.5305684528681285
+hist_purchase_amount_sum_-1
+test RMSE -  3.685591103318683 test adj r2 -  0.08360375547250343 train RMSE -  3.514650805865248
+added to final_features
+hist_merch_avg_sales_lag12_max
+test RMSE -  3.6859193052138397 test adj r2 -  0.08343599764066989 train RMSE -  3.5139035901659965
+hist_merchant_id_nunique_-9
+test RMSE -  3.685280564424563 test adj r2 -  0.08375363676358838 train RMSE -  3.5029770607310753
+added to final_features
+hist_purchase_amount_std_-11
+test RMSE -  3.6856096161022234 test adj r2 -  0.08358547000390781 train RMSE -  3.5135011070981674
+new_merch_avg_sales_lag12_max
+test RMSE -  3.6859200835335475 test adj r2 -  0.0834310701198604 train RMSE -  3.5200418404984326
+new_month_lag_std
+test RMSE -  3.6857953608279206 test adj r2 -  0.08349309806410854 train RMSE -  3.5270999033106123
+new_merch_active_months_lag6_max
+test RMSE -  3.6860263502989032 test adj r2 -  0.08337821915334376 train RMSE -  3.5289717982776323
+hist_installments_mean_-12
+test RMSE -  3.6852646976138463 test adj r2 -  0.083756987639655 train RMSE -  3.5261638007831833
+added to final_features
+hist_purchase_amount_max_-11
+test RMSE -  3.6862452242110204 test adj r2 -  0.08326481779579087 train RMSE -  3.5209072810854964
+hist_installments_min_0
+test RMSE -  3.685591948790113 test adj r2 -  0.08358971614566368 train RMSE -  3.527859490985371
+hist_subsector_id_nunique_-13
+test RMSE -  3.6861694140682517 test adj r2 -  0.08330252397439919 train RMSE -  3.5310646135539585
+hist_merch_avg_purchases_lag12_sum
+test RMSE -  3.6860062224730967 test adj r2 -  0.08338368899702708 train RMSE -  3.5125959177876824
+new_installments_std_2
+test RMSE -  3.686451897870561 test adj r2 -  0.08316201924892253 train RMSE -  3.529286957114695
+hist_merchant_id_count_-4
+test RMSE -  3.6860640773590627 test adj r2 -  0.08335491468405665 train RMSE -  3.530983554211994
+hist_purchase_amount_mean_0
+test RMSE -  3.68548559208631 test adj r2 -  0.08364260586984451 train RMSE -  3.528657791142937
+new_month_nunique
+test RMSE -  3.685999190381059 test adj r2 -  0.0833871863997574 train RMSE -  3.5196110409514687
+hist_category_2_3.0_mean
+test RMSE -  3.6855125630143353 test adj r2 -  0.08362919374319844 train RMSE -  3.5312818773702808
+new_merch_active_months_lag6_min
+test RMSE -  3.6865157742992114 test adj r2 -  0.08313024623526821 train RMSE -  3.52715628784908
+new_merch_avg_sales_lag6_max
+test RMSE -  3.686452748329121 test adj r2 -  0.08316159622276065 train RMSE -  3.5131729367958444
+hist_merchant_category_id_nunique_-1
+test RMSE -  3.686503001411872 test adj r2 -  0.08313659968904308 train RMSE -  3.5257864170445776
+hist_merchant_id_nunique_-12
+test RMSE -  3.6865124688760074 test adj r2 -  0.0831318904117131 train RMSE -  3.5322202182752775
+hist_purchase_amount_sum_0
+test RMSE -  3.6857186457485547 test adj r2 -  0.08352670950091534 train RMSE -  3.52040141672055
+hist_merch_subsect_ratio
+test RMSE -  3.6861718800960093 test adj r2 -  0.08330129744250481 train RMSE -  3.530764700679083
+new_merch_active_months_lag3_std
+test RMSE -  3.6867681432653496 test adj r2 -  0.08300470905807478 train RMSE -  3.5364317250379513
+hist_merch_avg_purchases_lag3_min
+test RMSE -  3.6863201032005226 test adj r2 -  0.08322757398964287 train RMSE -  3.5310853934773307
+hist_installments_min_-1
+test RMSE -  3.685524798127686 test adj r2 -  0.08362310942298246 train RMSE -  3.53057030082334
+new_merchant_id_nunique
+test RMSE -  3.6866454080637028 test adj r2 -  0.08306576292648937 train RMSE -  3.5211416930407275
+hist_installments_min_-12
+test RMSE -  3.686375322448719 test adj r2 -  0.08320010819075874 train RMSE -  3.5231209395895298
+hist_installments_std_-12
+test RMSE -  3.686173475864318 test adj r2 -  0.08330050375240972 train RMSE -  3.516649489936257
+purchase_amount_sum_-1
+test RMSE -  3.686557249189458 test adj r2 -  0.08310961575996478 train RMSE -  3.531825133847594
+new_purchase_mean_month_diff
+test RMSE -  3.685124317144041 test adj r2 -  0.0838222515258793 train RMSE -  3.534418701328582
+added to final_features
+hist_subsector_id_nunique_-6
+test RMSE -  3.6840623384074793 test adj r2 -  0.08434568750194238 train RMSE -  3.5298950836137273
+added to final_features
+hist_merch_most_recent_sales_range_mean
+test RMSE -  3.68371015495622 test adj r2 -  0.08451621069316495 train RMSE -  3.509326585208317
+added to final_features
+hist_installments_max_0
+test RMSE -  3.6827116026403797 test adj r2 -  0.08500793556474484 train RMSE -  3.504530342162694
+added to final_features
+hist_purchase_amount_min
+test RMSE -  3.681240557044633 test adj r2 -  0.08573424085633252 train RMSE -  3.508808380602807
+added to final_features
+hist_merchant_id_nunique_-3
+test RMSE -  3.6803785456204916 test adj r2 -  0.08615783862918225 train RMSE -  3.5066400752890936
+added to final_features
+weekofyear
+test RMSE -  3.6807624833969323 test adj r2 -  0.08596263626133138 train RMSE -  3.507985220775571
+hist_purchase_amount_mean_-11
+test RMSE -  3.68074557059517 test adj r2 -  0.08597103609549062 train RMSE -  3.5096595375406827
+hist_merch_numerical_2_mean
+test RMSE -  3.680217007048376 test adj r2 -  0.08623353057821104 train RMSE -  3.5041719269675924
+added to final_features
+diff_merchant_id_nunique_4_3
+test RMSE -  3.6799736752563312 test adj r2 -  0.08634983483982184 train RMSE -  3.513411475183137
+added to final_features
+new_purchase_amount_std
+test RMSE -  3.6800491545523055 test adj r2 -  0.08630782863011899 train RMSE -  3.506820022210055
+hist_installments_std_-8
+test RMSE -  3.680902611358126 test adj r2 -  0.08588398253870799 train RMSE -  3.50107293788468
+hist_merchant_id_nunique_-5
+test RMSE -  3.680217591947916 test adj r2 -  0.08622418656703568 train RMSE -  3.4932307511789373
+new_year_nunique
+test RMSE -  3.6805346604084166 test adj r2 -  0.08606672741470867 train RMSE -  3.4972648835200113
+hist_merch_active_months_lag6_sum
+test RMSE -  3.681142255077944 test adj r2 -  0.08576495233504455 train RMSE -  3.4975038540819248
+hist_category_2_1.0_sum
+test RMSE -  3.681074405491977 test adj r2 -  0.08579865377524987 train RMSE -  3.4841518757930046
+hist_category_2_3.0_sum
+test RMSE -  3.6804528022584893 test adj r2 -  0.08610738023382503 train RMSE -  3.4853779165488845
+new_merch_avg_purchases_lag6_sum
+test RMSE -  3.680858383490012 test adj r2 -  0.08590594952020181 train RMSE -  3.4882071097510803
+hist_purchase_amount_min_-13
+test RMSE -  3.680485509736298 test adj r2 -  0.08609113698496151 train RMSE -  3.49982750743768
+new_merchant_id_count_2
+test RMSE -  3.6808237813808504 test adj r2 -  0.08592313542096464 train RMSE -  3.5057508170551572
+new_merch_avg_purchases_lag6_mean
+test RMSE -  3.6806510727051696 test adj r2 -  0.08600891257870258 train RMSE -  3.479567403708355
+hist_merch_active_months_lag3_std
+test RMSE -  3.680833561965846 test adj r2 -  0.08591827769406679 train RMSE -  3.5035281001424616
+hist_merchant_category_id_nunique_0
+test RMSE -  3.6808626102910877 test adj r2 -  0.08590385017514046 train RMSE -  3.4954031152080125
+hist_installments_max
+test RMSE -  3.6806793048808 test adj r2 -  0.0859948911159999 train RMSE -  3.4999164891745407
+hist_subsector_id_nunique_-5
+test RMSE -  3.6806075808306984 test adj r2 -  0.08603051253479688 train RMSE -  3.5146436984018066
+diff_subsector_id_nunique_4_3
+test RMSE -  3.681096056698374 test adj r2 -  0.08578789951273524 train RMSE -  3.5002659859162693
+new_merch_avg_sales_lag6_mean
+test RMSE -  3.6809358175715845 test adj r2 -  0.08586748959025337 train RMSE -  3.495762950229126
+hist_purchase_amount_mean_-1
+test RMSE -  3.6799074133060325 test adj r2 -  0.08637821104490206 train RMSE -  3.4908559510266586
+added to final_features
+hist_merchant_id_nunique_-10
+test RMSE -  3.6795486169795035 test adj r2 -  0.08655183606505046 train RMSE -  3.4992261280629515
+added to final_features
+hist_installments_mean_-3
+test RMSE -  3.679041007236403 test adj r2 -  0.08679932298087312 train RMSE -  3.5009520704881423
+added to final_features
+hist_purchase_amount_min_-3
+test RMSE -  3.679494470937205 test adj r2 -  0.08656966911218111 train RMSE -  3.5076323939784553
+hist_installments_std_0
+test RMSE -  3.6798535656705402 test adj r2 -  0.08639137069134839 train RMSE -  3.5087850913322205
+new_category_2_1.0_sum
+test RMSE -  3.6790727275068233 test adj r2 -  0.08677905176868483 train RMSE -  3.4996830320109753
+hist_merchant_category_id_nunique_-13
+test RMSE -  3.6791563164575245 test adj r2 -  0.08673755432971242 train RMSE -  3.5108402334425883
+hist_category_2_2.0_sum
+test RMSE -  3.679357249957854 test adj r2 -  0.08663779774688907 train RMSE -  3.5032510553034406
+purchase_amount_sum_-3
+test RMSE -  3.679889292431334 test adj r2 -  0.08637363061836789 train RMSE -  3.507772511389458
+hist_installments_sum_0
+test RMSE -  3.6787713285793386 test adj r2 -  0.08692867237170354 train RMSE -  3.513609459745588
+added to final_features
+hist_purchase_amount_mean_-5
+test RMSE -  3.6770844326043832 test adj r2 -  0.08776133652826501 train RMSE -  3.4804083776338457
+added to final_features
+hist_purchase_amount_max_-6
+test RMSE -  3.6782299362801396 test adj r2 -  0.08718835558607152 train RMSE -  3.498635735081217
+hist_merch_numerical_1_max
+test RMSE -  3.6776859023006407 test adj r2 -  0.08745835710029426 train RMSE -  3.50559590899739
+hist_purchase_amount_std_-4
+test RMSE -  3.678012034964873 test adj r2 -  0.0872965037822262 train RMSE -  3.489976263074106
+purchase_amount_sum_-8
+test RMSE -  3.678132395970668 test adj r2 -  0.08723676732285135 train RMSE -  3.487125448940089
+hist_merch_avg_purchases_lag6_std
+test RMSE -  3.677630345291934 test adj r2 -  0.08748592753584061 train RMSE -  3.491142904388598
+hist_purchase_amount_min_-5
+test RMSE -  3.677848720254598 test adj r2 -  0.08737755550056026 train RMSE -  3.491738332110347
+new_merch_numerical_1_sum
+test RMSE -  3.6779270918601488 test adj r2 -  0.08733866078045105 train RMSE -  3.4921200481820946
+purchase_amount_sum_-4
+test RMSE -  3.677557487512075 test adj r2 -  0.087522082931903 train RMSE -  3.5010610739088364
+card_id_total
+test RMSE -  3.678183557076033 test adj r2 -  0.08721137492493514 train RMSE -  3.4971628130472525
+hist_merch_active_months_lag3_mean
+test RMSE -  3.6779035907116504 test adj r2 -  0.08735032415528143 train RMSE -  3.5022874856163497
+merch_purchase_diff_2_3
+test RMSE -  3.677832608021481 test adj r2 -  0.08738555167141049 train RMSE -  3.4966790861842627
+hist_merch_avg_sales_lag6_min
+test RMSE -  3.677372684349329 test adj r2 -  0.08761378758568417 train RMSE -  3.484544664653199
+hist_installments_max_-9
+test RMSE -  3.678102631788183 test adj r2 -  0.08725153978810019 train RMSE -  3.5031618866931837
+hist_installments_mean_-2
+test RMSE -  3.678284331866549 test adj r2 -  0.08716135711523854 train RMSE -  3.4950644077148807
+hist_purchase_month_min
+test RMSE -  3.677583532161727 test adj r2 -  0.08750915845586216 train RMSE -  3.4883436202552867
+hist_installments_min_-3
+test RMSE -  3.678033153465918 test adj r2 -  0.08728602258483364 train RMSE -  3.496851367215438
+hist_merchant_id_count_-3
+test RMSE -  3.678103653766272 test adj r2 -  0.087251032565138 train RMSE -  3.484255596115702
+hist_purchase_amount_min_-2
+test RMSE -  3.678214244531561 test adj r2 -  0.08719614388670471 train RMSE -  3.481757124341594
+hist_state_id_nunique
+test RMSE -  3.6775803577928374 test adj r2 -  0.08751073371921858 train RMSE -  3.5016691471200034
+hist_installments_std_-11
+test RMSE -  3.6774948762700435 test adj r2 -  0.08755315295028931 train RMSE -  3.486359781238182
+hist_installments_max_-1
+test RMSE -  3.6780519800329916 test adj r2 -  0.08727667883279255 train RMSE -  3.491493691223641
+hist_category_2_1.0_mean
+test RMSE -  3.674722495522402 test adj r2 -  0.08892838072567111 train RMSE -  3.4964863347114594
+added to final_features
+diff_purchase_sum_3_2
+test RMSE -  3.674957863119753 test adj r2 -  0.08880715376884918 train RMSE -  3.487526505649339
+hist_installments_sum_-6
+test RMSE -  3.6740288770868625 test adj r2 -  0.08926777316541035 train RMSE -  3.4721539297535005
+added to final_features
+hist_merchant_id_count_-6
+test RMSE -  3.6754472498905524 test adj r2 -  0.0885599387731908 train RMSE -  3.4919040902549776
+Unnamed: 0.1
+test RMSE -  3.6750438702243544 test adj r2 -  0.08875998855627909 train RMSE -  3.47220126514481
+new_purchase_date_ptp_ptp
+test RMSE -  3.6692659177800753 test adj r2 -  0.09162306323307323 train RMSE -  3.457219495498819
+added to final_features
+hist_merchant_id_nunique_-6
+test RMSE -  3.669639274716705 test adj r2 -  0.09143369342806007 train RMSE -  3.464761479990785
+hist_merchant_id_count_-13
+test RMSE -  3.669803645967061 test adj r2 -  0.09135229822087743 train RMSE -  3.4824964546652275
+new_installments_mean_2
+test RMSE -  3.6697671785111052 test adj r2 -  0.09137035690117823 train RMSE -  3.470141151061444
+hist_subsect_tran_ratio
+test RMSE -  3.6703437102855108 test adj r2 -  0.09108483742026308 train RMSE -  3.4854090894614194
+hist_installments_min_-4
+test RMSE -  3.669925910738852 test adj r2 -  0.09129175140951151 train RMSE -  3.469995631184831
+hist_merch_avg_sales_lag6_mean
+test RMSE -  3.669743156757704 test adj r2 -  0.09138225237286357 train RMSE -  3.4559600347973882
+hist_merch_avg_sales_lag12_mean
+test RMSE -  3.6696008808820775 test adj r2 -  0.09145270519430027 train RMSE -  3.4710282400618184
+new_purchase_amount_max_2
+test RMSE -  3.669020337667742 test adj r2 -  0.09174015293685478 train RMSE -  3.465286283016918
+added to final_features
+hist_merch_numerical_1_mean
+test RMSE -  3.6700635825090826 test adj r2 -  0.09121907021593056 train RMSE -  3.475918305378267
+hist_purchase_amount_sum_-7
+test RMSE -  3.6696298581871662 test adj r2 -  0.09143385510613578 train RMSE -  3.465811078432387
+hist_merchant_id_count_-12
+test RMSE -  3.669133783907974 test adj r2 -  0.09167948523674097 train RMSE -  3.468088131353946
+hist_category_3_A_sum
+test RMSE -  3.6704585111890013 test adj r2 -  0.09102347525941756 train RMSE -  3.46988359495183
+new_merch_avg_sales_lag12_mean
+test RMSE -  3.6704797591659086 test adj r2 -  0.09101295125101305 train RMSE -  3.4719387908705057
+hist_purchase_amount_mean_-4
+test RMSE -  3.6693439870759224 test adj r2 -  0.091575407636869 train RMSE -  3.472826787956765
+hist_purchase_sum_month_diff
+test RMSE -  3.6695087295134696 test adj r2 -  0.09149383477711337 train RMSE -  3.4668642941764363
+hist_purchase_amount_sum_-12
+test RMSE -  3.670001384670632 test adj r2 -  0.09124987280516061 train RMSE -  3.4838771747536526
+new_category_3_C_sum
+test RMSE -  3.6698708883670834 test adj r2 -  0.09131449753504983 train RMSE -  3.47004257554417
+hist_merch_avg_sales_lag6_sum
+test RMSE -  3.6696507089963486 test adj r2 -  0.09142353014483451 train RMSE -  3.469035642456096
+hist_category_3_C_sum
+test RMSE -  3.6698222468153836 test adj r2 -  0.09133858534700434 train RMSE -  3.4765772798731547
+hist_purchase_mean_month_diff
+test RMSE -  3.6694616881651188 test adj r2 -  0.09151712785758326 train RMSE -  3.4647574628487545
+hist_installments_min
+test RMSE -  3.670148286265093 test adj r2 -  0.09117712105362541 train RMSE -  3.4691791839848944
+diff_merchant_id_nunique_5_4
+test RMSE -  3.6692988885403235 test adj r2 -  0.09159773771395996 train RMSE -  3.473142538367211
+hist_installments_max_-13
+test RMSE -  3.669751575709976 test adj r2 -  0.09137358185854039 train RMSE -  3.4722359248533365
+hist_purchase_amount_sum_-2
+test RMSE -  3.6701545894481105 test adj r2 -  0.09117399939127913 train RMSE -  3.4765324304762784
+hist_purchase_amount_sum_-3
+test RMSE -  3.6701094111024153 test adj r2 -  0.09119637392702096 train RMSE -  3.476493948780276
+hist_installments_std_-7
+test RMSE -  3.6701545841384715 test adj r2 -  0.09117400202088943 train RMSE -  3.4715822420536697
+hist_installments_sum_-7
+test RMSE -  3.6703087285534024 test adj r2 -  0.09109766006287079 train RMSE -  3.465083378211193
+new_merch_active_months_lag3_min
+test RMSE -  3.6694334970682756 test adj r2 -  0.09153108686978995 train RMSE -  3.469474954971342
+new_category_2_1.0_mean
+test RMSE -  3.6699337565172447 test adj r2 -  0.09128336408775561 train RMSE -  3.4642338288807606
+hist_installments_max_-8
+test RMSE -  3.669465228375378 test adj r2 -  0.09151537489095829 train RMSE -  3.4760901233322996
+new_merchant_id_nunique_2
+test RMSE -  3.669600877866086 test adj r2 -  0.09144820556416455 train RMSE -  3.4684191674445004
+hist_purchase_amount_std_0
+test RMSE -  3.670117841071242 test adj r2 -  0.09119219901331799 train RMSE -  3.478221497703699
+merch_purchase_diff_0_1
+test RMSE -  3.6703427865840146 test adj r2 -  0.09108079196286656 train RMSE -  3.4777005107157564
+hist_installments_std_-4
+test RMSE -  3.6695565603698745 test adj r2 -  0.09147015045621731 train RMSE -  3.4733509614586664
+hist_merch_month_diff
+test RMSE -  3.6693975306060116 test adj r2 -  0.09154889575106662 train RMSE -  3.4640090827930647
+hist_first_buy
+test RMSE -  3.6699556620464504 test adj r2 -  0.09127251594741492 train RMSE -  3.4716379516216036
+new_merch_category_4_sum
+test RMSE -  3.6696089975177717 test adj r2 -  0.09144418489133588 train RMSE -  3.469872453979054
+hist_installments_mean_-10
+test RMSE -  3.6701596114045407 test adj r2 -  0.09117151225479003 train RMSE -  3.477817530615011
+hist_merch_active_months_lag12_sum
+test RMSE -  3.6696464069922357 test adj r2 -  0.091425660427921 train RMSE -  3.4680817190663915
+hist_merch_avg_sales_lag3_min
+test RMSE -  3.6700848972996614 test adj r2 -  0.09120851425088305 train RMSE -  3.4578463089685036
+hist_authorized_flag_mean
+test RMSE -  3.665474711129998 test adj r2 -  0.09349024157119878 train RMSE -  3.4618062622130323
+added to final_features
+hist_purchase_amount_sum_-10
+test RMSE -  3.665431592993481 test adj r2 -  0.0935070776210375 train RMSE -  3.476977362599547
+added to final_features
+hist_merchant_category_id_nunique_-3
+test RMSE -  3.6651055905538823 test adj r2 -  0.09366382670245765 train RMSE -  3.4549158375282687
+added to final_features
+new_city_id_nunique
+test RMSE -  3.6649960306228175 test adj r2 -  0.09371352161012336 train RMSE -  3.4702674363762327
+added to final_features
+hist_merch_avg_sales_lag3_mean
+test RMSE -  3.6648844432241603 test adj r2 -  0.09376421807643676 train RMSE -  3.4675852913258267
+added to final_features
+new_subsector_id_nunique_2
+test RMSE -  3.6654876587779794 test adj r2 -  0.0934613815246853 train RMSE -  3.455999957054419
+new_merch_avg_sales_lag3_max
+test RMSE -  3.6655813163525566 test adj r2 -  0.09341505465040689 train RMSE -  3.4558980132295622
+new_purchase_amount_sum_1
+test RMSE -  3.6652072749667437 test adj r2 -  0.09360006377114494 train RMSE -  3.451730078979696
+hist_merch_most_recent_sales_range_sum
+test RMSE -  3.665542144435319 test adj r2 -  0.09343443082986203 train RMSE -  3.449147303356322
+diff_purchase_sum_11_10
+test RMSE -  3.6657199490351466 test adj r2 -  0.09334647907192062 train RMSE -  3.454136422774654
+hist_purchase_date_max
+test RMSE -  3.6652106455122353 test adj r2 -  0.0935983967092876 train RMSE -  3.4561420829340053
+hist_purchase_amount_min_-4
+test RMSE -  3.666164343134156 test adj r2 -  0.09312663909365415 train RMSE -  3.4753101724186237
+new_purchase_amount_max
+test RMSE -  3.664607008769743 test adj r2 -  0.09389692921347692 train RMSE -  3.4606592859859853
+added to final_features
+hist_purchase_amount_min_-8
+test RMSE -  3.6631818958014986 test adj r2 -  0.09459704743339614 train RMSE -  3.453713364834749
+added to final_features
+new_merch_category_4_mean
+test RMSE -  3.6632515394212226 test adj r2 -  0.09455813458498696 train RMSE -  3.4569787022471865
+hist_merchant_category_id_nunique
+test RMSE -  3.6639958216212642 test adj r2 -  0.0941901703779453 train RMSE -  3.464236823976549
+hist_merch_avg_sales_lag12_std
+test RMSE -  3.664045704656133 test adj r2 -  0.0941655061298976 train RMSE -  3.463767229917861
+new_authorized_flag_sum
+test RMSE -  3.6640960846605757 test adj r2 -  0.09414059581859291 train RMSE -  3.4644915709202984
+hist_merch_numerical_2_min
+test RMSE -  3.664198228278813 test adj r2 -  0.09409009002141233 train RMSE -  3.4619019631871795
+hist_purchase_date_average
+test RMSE -  3.663818537343656 test adj r2 -  0.0942778243841722 train RMSE -  3.459093770183838
+hist_merch_avg_purchases_lag3_std
+test RMSE -  3.664513981761843 test adj r2 -  0.0939339540723444 train RMSE -  3.4726241501981177
+new_purchase_amount_mean_1
+test RMSE -  3.6642542715698903 test adj r2 -  0.09406237833232134 train RMSE -  3.457192598117371
+purchase_amount_sum_-7
+test RMSE -  3.6649219420967953 test adj r2 -  0.09373220312535568 train RMSE -  3.4613627537450737
+hist_purchase_amount_max_-7
+test RMSE -  3.663951061320727 test adj r2 -  0.09421230144715342 train RMSE -  3.471838924988668
+new_purchase_amount_max_1
+test RMSE -  3.663857193745211 test adj r2 -  0.09425871200485325 train RMSE -  3.467158942996632
+hist_merch_avg_sales_lag3_std
+test RMSE -  3.6637435603098694 test adj r2 -  0.09431489372405666 train RMSE -  3.4595916085893554
+hist_installments_min_-13
+test RMSE -  3.6634358147599473 test adj r2 -  0.0944670380270487 train RMSE -  3.4676993436845565
+hist_merch_numerical_2_sum
+test RMSE -  3.663914998496369 test adj r2 -  0.09423013198111896 train RMSE -  3.4573767033328253
+new_category_2_2.0_mean
+test RMSE -  3.6640529194385345 test adj r2 -  0.09416193881347945 train RMSE -  3.4649508471051873
+hist_merchant_category_id_nunique_-2
+test RMSE -  3.6636969630556178 test adj r2 -  0.09433793145587333 train RMSE -  3.459363181341357
+hist_merch_most_recent_purchases_range_sum
+test RMSE -  3.6637678039474477 test adj r2 -  0.09430290752810044 train RMSE -  3.459906821628832
+hist_installments_max_-5
+test RMSE -  3.663330523837158 test adj r2 -  0.09451908918113205 train RMSE -  3.4684303307557216
+hist_merch_avg_sales_lag6_std
+test RMSE -  3.663971110129796 test adj r2 -  0.09420238864318542 train RMSE -  3.467338957988477
+new_merch_month_diff
+test RMSE -  3.664125938162798 test adj r2 -  0.09412583464133206 train RMSE -  3.4656178027905975
+new_merch_numerical_1_max
+test RMSE -  3.663896143241328 test adj r2 -  0.09423945451067128 train RMSE -  3.467577743881332
+new_merch_avg_sales_lag12_std
+test RMSE -  3.664081050277584 test adj r2 -  0.09414802958067992 train RMSE -  3.4619932553142094
+new_merch_numerical_1_min
+test RMSE -  3.663621607899072 test adj r2 -  0.09437518650496357 train RMSE -  3.461341660111119
+hist_merch_active_months_lag6_std
+test RMSE -  3.6642575396325463 test adj r2 -  0.09406076236246164 train RMSE -  3.4697547274917033
+hist_subsector_id_nunique_-3
+test RMSE -  3.6644362774623334 test adj r2 -  0.0939723790756618 train RMSE -  3.47477121728269
+new_merchant_id_count_1
+test RMSE -  3.6643617220144358 test adj r2 -  0.09400924619671547 train RMSE -  3.462922899826599
+hist_merchant_category_id_nunique_-10
+test RMSE -  3.6641144645568495 test adj r2 -  0.09413150782348467 train RMSE -  3.4637243578785357
+hist_installments_mean_-6
+test RMSE -  3.663934137199685 test adj r2 -  0.09422066925828831 train RMSE -  3.4779778824086067
+hist_merchant_id_count_-7
+test RMSE -  3.6640161834438705 test adj r2 -  0.0941801026861614 train RMSE -  3.4582052789233115
+diff_merchant_id_lag_mean
+test RMSE -  3.6640883801186277 test adj r2 -  0.09414440533902013 train RMSE -  3.4683242704543757
+hist_installments_min_-9
+test RMSE -  3.6643087815671955 test adj r2 -  0.09403542440338097 train RMSE -  3.4689738829288332
+hist_purchase_amount_max_-1
+test RMSE -  3.6638332368870334 test adj r2 -  0.09427055670484763 train RMSE -  3.467053175822604
+hist_purchase_amount_min_-9
+test RMSE -  3.663644781396154 test adj r2 -  0.09436372977575314 train RMSE -  3.462131677682751
+hist_merch_avg_purchases_lag6_mean
+test RMSE -  3.663805579914946 test adj r2 -  0.09428423071115044 train RMSE -  3.462648019655184
+hist_merch_active_months_lag3_min
+test RMSE -  3.6642841130488737 test adj r2 -  0.09404762246300802 train RMSE -  3.4660703845502083
+new_merch_active_months_lag6_sum
+test RMSE -  3.6636269766554754 test adj r2 -  0.09437253225564468 train RMSE -  3.444060220417325
+hist_merch_purchase_mean_ratio
+test RMSE -  3.664019366068306 test adj r2 -  0.09417852906549651 train RMSE -  3.470099896197735
+hist_merch_avg_purchases_lag6_sum
+test RMSE -  3.6639194853041346 test adj r2 -  0.0942279135793449 train RMSE -  3.4597946578839567
+new_purchase_sum_month_diff
+test RMSE -  3.6644024168216904 test adj r2 -  0.09398912300658102 train RMSE -  3.468673721879618
+new_state_id_nunique
+test RMSE -  3.66354438295363 test adj r2 -  0.09441336516924936 train RMSE -  3.4638167770790873
+purchase_amount_sum_-2
+test RMSE -  3.664568741741521 test adj r2 -  0.09390687461284475 train RMSE -  3.4639602091783943
+hist_month_lag_max
+test RMSE -  3.6639936054583115 test adj r2 -  0.09419126613333229 train RMSE -  3.462517306221957
+hist_authorized_flag_sum
+test RMSE -  3.664189904857494 test adj r2 -  0.09409420566190119 train RMSE -  3.467361398266386
+hist_merch_avg_sales_lag3_max
+test RMSE -  3.6635990744798734 test adj r2 -  0.09438632671701941 train RMSE -  3.4636510501390445
+hist_installments_mean_-13
+test RMSE -  3.6639579465270784 test adj r2 -  0.09420889717620651 train RMSE -  3.4761128007535804
+new_category_2_3.0_sum
+test RMSE -  3.663939074821129 test adj r2 -  0.09421822794886914 train RMSE -  3.4717470786836584
+hist_merch_most_recent_purchases_range_std
+test RMSE -  3.6642231586373764 test adj r2 -  0.09407776277582958 train RMSE -  3.4652351777069748
+new_merch_most_recent_purchases_range_max
+test RMSE -  3.6640590483413518 test adj r2 -  0.09415890839977603 train RMSE -  3.464165973547059
+new_installments_mean_1
+test RMSE -  3.6635068221471387 test adj r2 -  0.09443193428507168 train RMSE -  3.460558520873847
+hist_merchant_category_id_nunique_-5
+test RMSE -  3.663125936970741 test adj r2 -  0.09462022356040989 train RMSE -  3.456559984959577
+added to final_features
+new_installments_max_1
+test RMSE -  3.6638217858720705 test adj r2 -  0.0942717309513017 train RMSE -  3.453253348022362
+hist_month_diff_mean
+test RMSE -  3.6632031676441303 test adj r2 -  0.09457756062730216 train RMSE -  3.45433507533125
+diff_purchase_sum_1_0
+test RMSE -  3.663990895089403 test adj r2 -  0.09418811851463138 train RMSE -  3.460898698750254
+hist_purchase_amount_sum
+test RMSE -  3.663557437427466 test adj r2 -  0.09440242465621929 train RMSE -  3.442595563211504
+new_purchase_date_min
+test RMSE -  3.6645163347027156 test adj r2 -  0.09392830150882525 train RMSE -  3.468431526733491
+hist_subsector_id_nunique_-1
+test RMSE -  3.664326249591002 test adj r2 -  0.0940222982370903 train RMSE -  3.476125262406004
+hist_installments_std_-13
+test RMSE -  3.6643474894453436 test adj r2 -  0.09401179541126026 train RMSE -  3.4711179403023187
+hist_installments_sum_-8
+test RMSE -  3.6641396840702685 test adj r2 -  0.09411454979295097 train RMSE -  3.4630888747335504
+hist_category_2_5.0_sum
+test RMSE -  3.6633265632453424 test adj r2 -  0.09451656099234651 train RMSE -  3.4350316635726075
+new_merch_purchase_mean_ratio
+test RMSE -  3.663711216803696 test adj r2 -  0.09432639737649129 train RMSE -  3.463563799465491
+new_category_3_A_mean
+test RMSE -  3.663548294882525 test adj r2 -  0.0944069445559842 train RMSE -  3.4495131231496856
+new_weekend_sum
+test RMSE -  3.6642685250573117 test adj r2 -  0.09405084194465596 train RMSE -  3.4624231085614263
+hist_merchant_id_count_0
+test RMSE -  3.6641128309504998 test adj r2 -  0.09412782754077231 train RMSE -  3.4673146548837814
+new_merch_active_months_lag6_std
+test RMSE -  3.6637331619141404 test adj r2 -  0.09431554763120054 train RMSE -  3.4677687651965043
+hist_merch_numerical_1_std
+test RMSE -  3.664113473083216 test adj r2 -  0.09412751003405984 train RMSE -  3.462795284164718
+hist_purchase_amount_min_-1
+test RMSE -  3.664340813377127 test adj r2 -  0.0940150966448714 train RMSE -  3.4525309707831253
+new_purchase_date_max
+test RMSE -  3.6627423998052118 test adj r2 -  0.09480531938595083 train RMSE -  3.4663609578413386
+added to final_features
+new_month_diff_nunique
+test RMSE -  3.6620451891584276 test adj r2 -  0.09514541496704254 train RMSE -  3.4588035995243622
+added to final_features
+new_month_lag_max
+test RMSE -  3.662162512171426 test adj r2 -  0.09508295202350636 train RMSE -  3.463379607536072
+hist_merch_avg_purchases_lag12_max
+test RMSE -  3.6618822900817216 test adj r2 -  0.09522143197555333 train RMSE -  3.4516323454116176
+added to final_features
+hist_merchant_id_nunique_-4
+test RMSE -  3.661297846660955 test adj r2 -  0.09550573644388816 train RMSE -  3.4402917549492806
+added to final_features
+hist_installments_sum_-4
+test RMSE -  3.6621781786366236 test adj r2 -  0.09506624278110865 train RMSE -  3.4455282165192123
+new_category_2_2.0_sum
+test RMSE -  3.662582610293321 test adj r2 -  0.09486635951522449 train RMSE -  3.456573292224534
+hist_installments_min_-8
+test RMSE -  3.6622347727908044 test adj r2 -  0.09503827343947435 train RMSE -  3.4567490825242033
+new_category_1_sum
+test RMSE -  3.6577110146730916 test adj r2 -  0.09727259197435922 train RMSE -  3.451944449743528
+added to final_features
+hist_merchant_category_id_nunique_-9
+test RMSE -  3.657598487993026 test adj r2 -  0.09732366225207756 train RMSE -  3.455050186948834
+added to final_features
+hist_installments_std
+test RMSE -  3.658074174068099 test adj r2 -  0.09708437976021822 train RMSE -  3.447598936611307
+new_purchase_month_mean
+test RMSE -  3.658324690303751 test adj r2 -  0.0969607066159367 train RMSE -  3.4571184696424693
+hist_merch_active_months_lag12_std
+test RMSE -  3.6582952182717814 test adj r2 -  0.09697525660696937 train RMSE -  3.451951348166695
+diff_purchase_by_merchant
+test RMSE -  3.658300851067721 test adj r2 -  0.0969724757717878 train RMSE -  3.451830690314894
+hist_installments_sum_-10
+test RMSE -  3.657705108815788 test adj r2 -  0.09726656194418537 train RMSE -  3.4456059296250414
+hist_installments_std_-10
+test RMSE -  3.6579814210183623 test adj r2 -  0.09713016730399138 train RMSE -  3.4567855804986722
+new_purchase_month_min
+test RMSE -  3.658239561022522 test adj r2 -  0.09700273360808886 train RMSE -  3.443038283447207
+hist_purchase_date_ptp_ptp
+test RMSE -  3.65770291912022 test adj r2 -  0.09726764279174327 train RMSE -  3.4613722096071897
+hist_installments_sum_-2
+test RMSE -  3.6581770717062283 test adj r2 -  0.09703358298189668 train RMSE -  3.4573330442267425
+hist_merchant_category_id_nunique_-4
+test RMSE -  3.6586645058485323 test adj r2 -  0.09679293526287969 train RMSE -  3.460864077864892
+hist_installments_mean_-9
+test RMSE -  3.6582583073952475 test adj r2 -  0.09699347890160159 train RMSE -  3.463057389511936
+diff_subsector_id_nunique_2_1
+test RMSE -  3.6579307188579575 test adj r2 -  0.09715519593511845 train RMSE -  3.4494300038929055
+hist_category_1_mean
+test RMSE -  3.6522440971227486 test adj r2 -  0.09996014032261813 train RMSE -  3.446808592047131
+added to final_features
+hist_merchant_id_nunique_-11
+test RMSE -  3.652720038492058 test adj r2 -  0.09972108758406972 train RMSE -  3.4517800286545244
+hist_installments_max_-7
+test RMSE -  3.6528741219548704 test adj r2 -  0.09964513267011665 train RMSE -  3.4487484420701535
+hist_purchase_amount_max_-13
+test RMSE -  3.653535403779162 test adj r2 -  0.09931911968361029 train RMSE -  3.460087496629746
+hist_merch_numerical_1_sum
+test RMSE -  3.6524071073042976 test adj r2 -  0.09987533607757693 train RMSE -  3.448885439444269
+new_weekend_mean
+test RMSE -  3.652795990247856 test adj r2 -  0.09968364782724115 train RMSE -  3.4472612181650044
+new_merchant_id_nunique_1
+test RMSE -  3.6522920030599013 test adj r2 -  0.0999320693680742 train RMSE -  3.4415874070810033
+hist_subsector_id_nunique
+test RMSE -  3.6524704881736882 test adj r2 -  0.09984409576011555 train RMSE -  3.445660158687057
+new_category_1_mean
+test RMSE -  3.652470065154927 test adj r2 -  0.09984430426710555 train RMSE -  3.4446248192144084
+new_category_2_5.0_sum
+test RMSE -  3.6523979843698116 test adj r2 -  0.0998798327110797 train RMSE -  3.443919396788046
+hist_purchase_amount_std_-6
+test RMSE -  3.65290343993405 test adj r2 -  0.09963068011013088 train RMSE -  3.457659961799391
+hist_merchant_id_count_-9
+test RMSE -  3.652221475711972 test adj r2 -  0.09996683043928278 train RMSE -  3.4427118087125583
+added to final_features
+hist_category_2_5.0_mean
+test RMSE -  3.653009718168883 test adj r2 -  0.09957382711012985 train RMSE -  3.451293776411744
+diff_purchase_by_subsector
+test RMSE -  3.6524358032693396 test adj r2 -  0.09985673213496415 train RMSE -  3.440343494977906
+hist_installments_std_-3
+test RMSE -  3.65306975037587 test adj r2 -  0.09954423232735365 train RMSE -  3.458961136104474
+hist_category_2_2.0_mean
+test RMSE -  3.652802813811396 test adj r2 -  0.09967582345676862 train RMSE -  3.448906987218033
+hist_subsector_id_nunique_-11
+test RMSE -  3.651789328095421 test adj r2 -  0.10017535171242753 train RMSE -  3.4355082763181004
+added to final_features
+hist_purchase_amount_max_0
+test RMSE -  3.65186092476689 test adj r2 -  0.10013560913508712 train RMSE -  3.4369549602308105
+hist_purchase_amount_std_-3
+test RMSE -  3.6529101604325085 test adj r2 -  0.09961844516318052 train RMSE -  3.457601224385126
+new_merch_subsect_ratio
+test RMSE -  3.653100176823813 test adj r2 -  0.09952477097130319 train RMSE -  3.4680151328180684
+hist_merchant_id_nunique_-2
+test RMSE -  3.652848455696723 test adj r2 -  0.09964886328695999 train RMSE -  3.463040995171781
+hist_installments_sum_-11
+test RMSE -  3.652150786563563 test adj r2 -  0.09999275229237237 train RMSE -  3.4557520427461137
+purchase_amount_sum_-5
+test RMSE -  3.6518324735079926 test adj r2 -  0.10014963057541693 train RMSE -  3.4353944759421067
+new_installments_std
+test RMSE -  3.6522957208786693 test adj r2 -  0.09992131793495851 train RMSE -  3.4425745720560803
+hist_installments_sum
+test RMSE -  3.6526096211825303 test adj r2 -  0.0997665949142772 train RMSE -  3.4527046393121763
+new_purchase_date_diff
+test RMSE -  3.653220541346357 test adj r2 -  0.09946543120434914 train RMSE -  3.468948223643197
+hist_subsector_id_nunique_-7
+test RMSE -  3.6522638337820825 test adj r2 -  0.09993703449942903 train RMSE -  3.4482056693930425
+hist_purchase_amount_sum_-13
+test RMSE -  3.6523731991716883 test adj r2 -  0.09988312973505331 train RMSE -  3.447418713552689
+new_purchase_date_uptonow
+test RMSE -  3.6531605461626957 test adj r2 -  0.0994950091028638 train RMSE -  3.441502043103617
+new_merch_active_months_lag12_sum
+test RMSE -  3.6522021626750614 test adj r2 -  0.09996743066649261 train RMSE -  3.4330813604145822
+hist_purchase_amount_std_-8
+test RMSE -  3.652436859764122 test adj r2 -  0.09985175152177683 train RMSE -  3.4483579381919265
+hist_merchant_id_nunique_-7
+test RMSE -  3.6521518226057235 test adj r2 -  0.09999224166417531 train RMSE -  3.4589563170915754
+hist_installments_mean_-7
+test RMSE -  3.6525928059927426 test adj r2 -  0.09977488354201769 train RMSE -  3.443069316759572
+new_merch_active_months_lag3_max
+test RMSE -  3.6526203504207984 test adj r2 -  0.09976130618436174 train RMSE -  3.4382503063877268
+new_purchase_amount_mean
+test RMSE -  3.652522292098252 test adj r2 -  0.09980964118926772 train RMSE -  3.456384055248434
+new_merch_tran_ratio
+test RMSE -  3.653252854217387 test adj r2 -  0.09944950061064939 train RMSE -  3.4660664866010875
+diff_subsector_id_nunique_1_0
+test RMSE -  3.6527511953781726 test adj r2 -  0.0996968079381727 train RMSE -  3.4521951633552748
+hist_purchase_amount_min_0
+test RMSE -  3.6524076406261345 test adj r2 -  0.09986615366023166 train RMSE -  3.448445182643618
+hist_purchase_amount_max
+test RMSE -  3.652535739925201 test adj r2 -  0.09980301254994217 train RMSE -  3.4571786057653298
+new_purchase_amount_sum
+test RMSE -  3.6533747372034284 test adj r2 -  0.09938940971669241 train RMSE -  3.454765236534931
+purchase_amount_sum_-12
+test RMSE -  3.652592201100187 test adj r2 -  0.09977518170798094 train RMSE -  3.44700832075788
+hist_merch_merchant_group_id_nunique
+test RMSE -  3.6526238337159116 test adj r2 -  0.09975958917123862 train RMSE -  3.4514268337670417
+hist_month_diff_nunique
+test RMSE -  3.6522146076922026 test adj r2 -  0.09996129686593169 train RMSE -  3.432116807139311
+hist_merch_category_4_sum
+test RMSE -  3.6530371475199424 test adj r2 -  0.09955584366817116 train RMSE -  3.4614839607979833
+new_installments_sum_2
+test RMSE -  3.6526928635335265 test adj r2 -  0.09972556211484684 train RMSE -  3.4606521919793365
+new_merch_active_months_lag6_mean
+test RMSE -  3.653054790579299 test adj r2 -  0.09954714590386182 train RMSE -  3.4662464313318764
+new_purchase_date_average
+test RMSE -  3.65282909975391 test adj r2 -  0.09965840493597888 train RMSE -  3.474248683928411
+hist_purchase_amount_std_-1
+test RMSE -  3.652454028125815 test adj r2 -  0.09984328916767082 train RMSE -  3.4477605696706513
+new_merch_most_recent_purchases_range_min
+test RMSE -  3.6524276949946874 test adj r2 -  0.09985626885698096 train RMSE -  3.4488364355661703
+hist_merch_avg_purchases_lag6_max
+test RMSE -  3.65246257904105 test adj r2 -  0.09983907437253114 train RMSE -  3.4595450047955567
+hist_installments_min_-11
+test RMSE -  3.652774899000956 test adj r2 -  0.09968512331178803 train RMSE -  3.4490614663654036
+new_merch_most_recent_sales_range_min
+test RMSE -  3.652187653183505 test adj r2 -  0.09997458196230946 train RMSE -  3.44598649310191
+hist_merchant_id_count_-5
+test RMSE -  3.6524209104344583 test adj r2 -  0.0998596129744812 train RMSE -  3.455356160153895
+merch_purchase_diff_5_6
+test RMSE -  3.6527641454547677 test adj r2 -  0.09969042424799501 train RMSE -  3.452721615031501
+month_lag
+test RMSE -  3.6526203504207984 test adj r2 -  0.09976130618436174 train RMSE -  3.4382503063877268
+hist_merch_most_recent_purchases_range_mean
+test RMSE -  3.653044860268765 test adj r2 -  0.09955204140355811 train RMSE -  3.4505710059615504
+new_installments_std_1
+test RMSE -  3.6519835915947243 test adj r2 -  0.10007515482618201 train RMSE -  3.4251730523934065
+new_category_2_4.0_mean
+test RMSE -  3.6524245979995986 test adj r2 -  0.09985779537017458 train RMSE -  3.4385048874206845
+hist_installments_mean_-4
+test RMSE -  3.6530545009238553 test adj r2 -  0.0995472887000014 train RMSE -  3.456066873747259
+hist_installments_min_-7
+test RMSE -  3.6519370278942764 test adj r2 -  0.10009810321175017 train RMSE -  3.4428277566721404
+hist_merch_avg_sales_lag12_min
+test RMSE -  3.65295109259509 test adj r2 -  0.09959826685654072 train RMSE -  3.447309526925475
+new_merch_avg_purchases_lag6_std
+test RMSE -  3.6526874127184135 test adj r2 -  0.09972824902340083 train RMSE -  3.4546870629890036
+new_merch_avg_purchases_lag3_min
+test RMSE -  3.652544776054644 test adj r2 -  0.09979855848999941 train RMSE -  3.445288903789622
+hist_merch_active_months_lag3_sum
+test RMSE -  3.6524472190241886 test adj r2 -  0.0998466454058401 train RMSE -  3.4424927066298934
+hist_installments_std_-5
+test RMSE -  3.6520060773757033 test adj r2 -  0.1000640728622274 train RMSE -  3.4441739303430388
+hist_merch_most_recent_purchases_range_max
+test RMSE -  3.6526827551453422 test adj r2 -  0.09973054491041078 train RMSE -  3.455291987428904
+hist_purchase_amount_sum_-4
+test RMSE -  3.652648639044269 test adj r2 -  0.09974736188705446 train RMSE -  3.439929654789716
+hist_month_nunique
+test RMSE -  3.6527672366211834 test adj r2 -  0.09968890046611867 train RMSE -  3.427058346447722
+hist_purchase_amount_min_-7
+test RMSE -  3.6521845598187324 test adj r2 -  0.0999761065859095 train RMSE -  3.436510640740502
+diff_purchase_sum_5_4
+test RMSE -  3.652651429583763 test adj r2 -  0.09974598634193677 train RMSE -  3.445901313403147
+new_card_id_size
+test RMSE -  3.6522209262542322 test adj r2 -  0.09995818261559042 train RMSE -  3.443046803871353
+hist_installments_std_-9
+test RMSE -  3.6527796970741204 test adj r2 -  0.0996827581074674 train RMSE -  3.470787164860048
+new_merch_numerical_2_mean
+test RMSE -  3.6525339370779975 test adj r2 -  0.099803901202285 train RMSE -  3.4598637378786528
+new_installments_sum
+test RMSE -  3.6528020912307433 test adj r2 -  0.0996717188941556 train RMSE -  3.441452723655965
+hist_installments_max_-2
+test RMSE -  3.6532710320560184 test adj r2 -  0.09944053867834568 train RMSE -  3.454227426779665
+new_merch_most_recent_sales_range_std
+test RMSE -  3.652840404039505 test adj r2 -  0.09965283241452028 train RMSE -  3.453590426773837
+hist_merch_active_months_lag12_mean
+test RMSE -  3.6525906354579343 test adj r2 -  0.09977595345014811 train RMSE -  3.4532558273459166
+hist_purchase_date_diff
+test RMSE -  3.6531921881888474 test adj r2 -  0.09947940950054046 train RMSE -  3.4572228673871104
+new_merch_avg_purchases_lag12_sum
+test RMSE -  3.652840214249077 test adj r2 -  0.09965292597309405 train RMSE -  3.4538045582989247
+hist_merch_avg_sales_lag12_sum
+test RMSE -  3.6521195877709443 test adj r2 -  0.10000812899568134 train RMSE -  3.4542916895162676
+hist_merch_most_recent_sales_range_max
+test RMSE -  3.6524553157602218 test adj r2 -  0.09984265448592111 train RMSE -  3.4546867813928968
+new_merch_avg_sales_lag3_mean
+test RMSE -  3.6524261237272855 test adj r2 -  0.09985704333703416 train RMSE -  3.4469051770172414
+merch_purchase_diff_1_2
+test RMSE -  3.652661354168281 test adj r2 -  0.09974109419202515 train RMSE -  3.442117297032678
+new_installments_min
+test RMSE -  3.652822938277973 test adj r2 -  0.09966144226854645 train RMSE -  3.4544016535121083
+new_merch_numerical_1_std
+test RMSE -  3.652002730899008 test adj r2 -  0.10006572215478804 train RMSE -  3.4429829921699566
+hist_merch_avg_purchases_lag12_mean
+test RMSE -  3.652351739857361 test adj r2 -  0.0998937068765734 train RMSE -  3.44990559428152
+hist_installments_max_-11
+test RMSE -  3.652688330203506 test adj r2 -  0.09972779676131494 train RMSE -  3.4544642157681564
+hist_installments_mean
+test RMSE -  3.652108336293611 test adj r2 -  0.10001367439051023 train RMSE -  3.4448762838688785
+merch_purchase_diff_4_5
+test RMSE -  3.651730986406211 test adj r2 -  0.10019964488342414 train RMSE -  3.4372302773001095
+added to final_features
+new_weekofyear_nunique
+test RMSE -  3.6523448779051986 test adj r2 -  0.09989262938414545 train RMSE -  3.445142998406373
+hist_purchase_amount_min_-12
+test RMSE -  3.652133477174531 test adj r2 -  0.09999682428101808 train RMSE -  3.4390885580858788
+hist_purchase_month_mean
+test RMSE -  3.651921027981005 test adj r2 -  0.10010152986679788 train RMSE -  3.4504429215259522
+hist_merch_numerical_1_min
+test RMSE -  3.652432052021333 test adj r2 -  0.09984966137126805 train RMSE -  3.453504106940783
+purchase_amount_sum_-9
+test RMSE -  3.6520625651007665 test adj r2 -  0.10003177397406149 train RMSE -  3.4375975045088802
+month
+test RMSE -  3.652434856708424 test adj r2 -  0.09984827892747816 train RMSE -  3.4461293533761483
+diff_purchase_sum_12_11
+test RMSE -  3.6519307179478138 test adj r2 -  0.10009675429919451 train RMSE -  3.436591977170824
+new_purchase_month_std
+test RMSE -  3.6523637147685264 test adj r2 -  0.09988334480461603 train RMSE -  3.431502924762313
+diff_purchase_sum_13_12
+test RMSE -  3.652074635882117 test adj r2 -  0.10002582482207523 train RMSE -  3.4434392191033902
+new_category_3_B_sum
+test RMSE -  3.652203905968257 test adj r2 -  0.09996211210546935 train RMSE -  3.426663946550073
+hist_purchase_amount_max_-12
+test RMSE -  3.6519663342792135 test adj r2 -  0.10007920116853763 train RMSE -  3.441490882125232
+new_month_lag_min
+test RMSE -  3.6521753683809552 test adj r2 -  0.0999761774808503 train RMSE -  3.440832465974362
+hist_merchant_id_nunique_0
+test RMSE -  3.652608890965215 test adj r2 -  0.09976249452655717 train RMSE -  3.4549451181428146
+hist_month_lag_std
+test RMSE -  3.6520433139806614 test adj r2 -  0.10004126195540752 train RMSE -  3.429255707180522
+hist_purchase_amount_std_-10
+test RMSE -  3.652664309405399 test adj r2 -  0.09973517699089463 train RMSE -  3.455448046833517
+hist_merchant_category_id_nunique_-8
+test RMSE -  3.6528143593990547 test adj r2 -  0.09966121043161014 train RMSE -  3.4581264992431455
+new_merch_active_months_lag12_std
+test RMSE -  3.651760393816057 test adj r2 -  0.10018069437171417 train RMSE -  3.4124631801798815
+hist_dayofweek_nunique
+test RMSE -  3.6524978522896254 test adj r2 -  0.09981722782207625 train RMSE -  3.4548342573455977
+new_merch_avg_purchases_lag12_min
+test RMSE -  3.6524183655272204 test adj r2 -  0.09985640749497515 train RMSE -  3.423864847067839
+hist_merch_active_months_lag6_mean
+test RMSE -  3.652418987671892 test adj r2 -  0.09985610083810759 train RMSE -  3.442581097031885
+new_merch_most_recent_sales_range_mean
+test RMSE -  3.6524756111855505 test adj r2 -  0.09982819072942084 train RMSE -  3.4545235258193885
+new_merch_avg_purchases_lag12_mean
+test RMSE -  3.65248752210151 test adj r2 -  0.09982231970418043 train RMSE -  3.445373529056596
+new_first_buy
+test RMSE -  3.6515472840059187 test adj r2 -  0.1002857148031322 train RMSE -  3.439494954033168
+added to final_features
+hist_purchase_amount_mean
+test RMSE -  3.6523880780897473 test adj r2 -  0.09986687635954239 train RMSE -  3.4499185725698696
+new_installments_sum_1
+test RMSE -  3.652042340347426 test adj r2 -  0.10003728282107871 train RMSE -  3.443985305731288
+new_purchase_amount_mean_2
+test RMSE -  3.6524374285888612 test adj r2 -  0.09984255127793407 train RMSE -  3.433998938649016
+hist_category_3_B_mean
+test RMSE -  3.6526261435098424 test adj r2 -  0.09974952981834795 train RMSE -  3.4412951058801924
+hist_merch_avg_sales_lag3_sum
+test RMSE -  3.6519597140604994 test adj r2 -  0.10007800509621767 train RMSE -  3.4224690199560905
+new_installments_min_1
+test RMSE -  3.65257845288235 test adj r2 -  0.09977303796172488 train RMSE -  3.4202019320687023
+hist_installments_sum_-5
+test RMSE -  3.6519416578652644 test adj r2 -  0.1000869039496215 train RMSE -  3.438471393178085
+new_merch_avg_purchases_lag3_max
+test RMSE -  3.6525500728859432 test adj r2 -  0.09978702716908827 train RMSE -  3.4449838004221602
+hist_city_id_nunique
+test RMSE -  3.6523170180565043 test adj r2 -  0.09990190159020906 train RMSE -  3.446865852579765
+new_category_2_3.0_mean
+test RMSE -  3.652217747236385 test adj r2 -  0.0999508306736655 train RMSE -  3.419681070682615
+hist_merch_active_months_lag6_max
+test RMSE -  3.652687800864382 test adj r2 -  0.0997191366005804 train RMSE -  3.4570623571592884
+new_subsect_purchase_mean_ratio
+test RMSE -  3.652716871668463 test adj r2 -  0.09970480633521284 train RMSE -  3.4375879985260887
+hist_purchase_amount_min_-11
+test RMSE -  3.6525508776212 test adj r2 -  0.09978663049652647 train RMSE -  3.440239401146134
+hist_subsector_id_nunique_-8
+test RMSE -  3.652723265304013 test adj r2 -  0.099701654618507 train RMSE -  3.4373135795978627
+hist_purchase_amount_sum_-5
+test RMSE -  3.6521594015923573 test adj r2 -  0.09997958773724147 train RMSE -  3.4175826207493216
+hist_installments_max_-4
+test RMSE -  3.6522325640874413 test adj r2 -  0.0999435277566656 train RMSE -  3.4442395822259635
+new_merch_active_months_lag12_min
+test RMSE -  3.652527972888339 test adj r2 -  0.09979792073328819 train RMSE -  3.435867555071563
+hist_category_1_sum
+test RMSE -  3.6518730819273713 test adj r2 -  0.10012070065885159 train RMSE -  3.441010987271455
+hist_category_3_C_mean
+test RMSE -  3.652891063508902 test adj r2 -  0.09961893720186965 train RMSE -  3.43366166357472
+hist_installments_min_-6
+test RMSE -  3.6525618882246036 test adj r2 -  0.09978120310747018 train RMSE -  3.4335482652644513
+hist_installments_sum_-12
+test RMSE -  3.6527371594103784 test adj r2 -  0.09969480555612065 train RMSE -  3.4271443909360393
+hist_merchant_category_id_nunique_-12
+test RMSE -  3.652556629011943 test adj r2 -  0.09978379550088068 train RMSE -  3.436938990443243
+new_purchase_amount_std_1
+test RMSE -  3.6524198718067655 test adj r2 -  0.09985120513197254 train RMSE -  3.4307004485526145
+new_dayofweek_nunique
+test RMSE -  3.6522320244073443 test adj r2 -  0.09994379375425466 train RMSE -  3.4499230092642024
+hist_installments_sum_-1
+test RMSE -  3.65341890308116 test adj r2 -  0.09935870984557216 train RMSE -  3.453260099503195
+new_merch_numerical_2_std
+test RMSE -  3.652195076992883 test adj r2 -  0.0999620043067383 train RMSE -  3.440459118416907
+new_installments_min_2
+test RMSE -  3.652182760528828 test adj r2 -  0.09996807477487946 train RMSE -  3.42719092775019
+new_merch_most_recent_purchases_range_sum
+test RMSE -  3.6526442465162607 test adj r2 -  0.09974060622212688 train RMSE -  3.434265335408869
+hist_purchase_amount_sum_-8
+test RMSE -  3.652713949917987 test adj r2 -  0.09970624659842031 train RMSE -  3.449714578853353
+hist_purchase_amount_std_-2
+test RMSE -  3.6532776343238624 test adj r2 -  0.09942835968279151 train RMSE -  3.435331213262937
+hist_merchant_id_nunique_-8
+test RMSE -  3.653193342302114 test adj r2 -  0.09946991695609131 train RMSE -  3.4632303906032256
+new_merch_merchant_group_id_nunique
+test RMSE -  3.652795824414955 test adj r2 -  0.09966588651257702 train RMSE -  3.4478520870301237
+hist_month_lag_min
+test RMSE -  3.652687800864382 test adj r2 -  0.0997191366005804 train RMSE -  3.4570623571592884
+hist_installments_max_-6
+test RMSE -  3.65209549499245 test adj r2 -  0.1000110851254129 train RMSE -  3.4388678365458225
+hist_installments_max_-3
+test RMSE -  3.6527118139254613 test adj r2 -  0.09970729952519874 train RMSE -  3.443036242554227
+diff_purchase_sum_8_7
+test RMSE -  3.652485013386859 test adj r2 -  0.09981909620705298 train RMSE -  3.449232888737027
+hist_purchase_amount_max_-4
+test RMSE -  3.652668899119526 test adj r2 -  0.099728454032607 train RMSE -  3.439825589588035
+hist_hour_nunique
+test RMSE -  3.6529526837461597 test adj r2 -  0.09958856007772066 train RMSE -  3.445784337599785
+hist_category_2_4.0_sum
+test RMSE -  3.652876862012004 test adj r2 -  0.09962593808626086 train RMSE -  3.4475899495821998
+hist_installments_mean_0
+test RMSE -  3.652717635565531 test adj r2 -  0.0997044297755425 train RMSE -  3.438733615923744
+hist_merchant_id_nunique
+test RMSE -  3.6521548150091254 test adj r2 -  0.0999818483263808 train RMSE -  3.441347294851691
+hist_subsector_id_nunique_-12
+test RMSE -  3.6521381002180413 test adj r2 -  0.09999008652093389 train RMSE -  3.4297530763874873
+hist_installments_min_-5
+test RMSE -  3.6528748616861173 test adj r2 -  0.09962692418084795 train RMSE -  3.4499232334281027
+hist_merch_purchase_sum_ratio
+test RMSE -  3.652833473887169 test adj r2 -  0.09964732687743338 train RMSE -  3.447949608775919
+hist_purchase_amount_min_-6
+test RMSE -  3.6527879665996603 test adj r2 -  0.09966976006691652 train RMSE -  3.4323708393726533
+merch_purchase_diff_lag_mean
+test RMSE -  3.6530167935811684 test adj r2 -  0.09955695510476081 train RMSE -  3.441547256279629
+new_merch_avg_purchases_lag3_std
+test RMSE -  3.6526349652980747 test adj r2 -  0.09974518126019694 train RMSE -  3.4510465356213955
+hist_purchase_amount_std_-9
+test RMSE -  3.6526753765092153 test adj r2 -  0.09972526107153623 train RMSE -  3.438554876517279
+new_installments_mean
+test RMSE -  3.65259689247219 test adj r2 -  0.09976394857018533 train RMSE -  3.438929379644999
+hist_purchase_amount_mean_-8
+test RMSE -  3.653378627898068 test adj r2 -  0.09937856702258052 train RMSE -  3.4523663209400297
+hist_category_2_4.0_mean
+test RMSE -  3.6524682399815065 test adj r2 -  0.09982736403811321 train RMSE -  3.4341703437806297
+hist_purchase_amount_std
+test RMSE -  3.6523111551296092 test adj r2 -  0.09990479137501562 train RMSE -  3.43283339412656
+new_merch_most_recent_purchases_range_mean
+test RMSE -  3.6532654057062937 test adj r2 -  0.09943438864026677 train RMSE -  3.4381194519428013
+hist_merchant_id_nunique_-1
+test RMSE -  3.652488210168194 test adj r2 -  0.09981752046738013 train RMSE -  3.4482735898053773
+hist_subsect_purchase_mean_ratio
+test RMSE -  3.652390096465103 test adj r2 -  0.09986588149975373 train RMSE -  3.4365819167359035
+new_merch_avg_sales_lag3_min
+test RMSE -  3.652791931029787 test adj r2 -  0.09966780577978185 train RMSE -  3.4482026269924093
+new_merch_avg_sales_lag6_min
+test RMSE -  3.6532873553751566 test adj r2 -  0.09942356699215404 train RMSE -  3.4354887884130214
+new_merch_avg_purchases_lag6_max
+test RMSE -  3.6531254064273218 test adj r2 -  0.09950340969758686 train RMSE -  3.4590595632164267
+new_merch_avg_purchases_lag3_mean
+test RMSE -  3.6530118091070567 test adj r2 -  0.09955941237897459 train RMSE -  3.453180410014853
+purchase_amount_sum_-10
+test RMSE -  3.652722529360988 test adj r2 -  0.09970201739891615 train RMSE -  3.4369300789954074
+hist_purchase_amount_max_-5
+test RMSE -  3.652715262742537 test adj r2 -  0.09970559944785207 train RMSE -  3.442607759804364
+hist_purchase_amount_mean_-9
+test RMSE -  3.6522198331765483 test adj r2 -  0.0999498025590363 train RMSE -  3.446411867649745
+hist_purchase_amount_std_-13
+test RMSE -  3.652803171304291 test adj r2 -  0.09966226481453155 train RMSE -  3.44771322608742
+hist_subsector_id_nunique_-4
+test RMSE -  3.652692574944147 test adj r2 -  0.09971678325657951 train RMSE -  3.4399274760927234
+hist_purchase_amount_sum_-9
+test RMSE -  3.6526388537153758 test adj r2 -  0.09974326452430127 train RMSE -  3.4243424319746074
+new_subsector_id_nunique
+test RMSE -  3.6527720369656196 test adj r2 -  0.09967761264423369 train RMSE -  3.4459194582785697
+new_merch_active_months_lag3_sum
+test RMSE -  3.6528006103472617 test adj r2 -  0.09966352725618821 train RMSE -  3.4449686161534965
+new_subsect_purchase_sum_ratio
+test RMSE -  3.6530599456039727 test adj r2 -  0.09953568163655635 train RMSE -  3.457240348498278
+diff_subsector_id_nunique_3_2
+test RMSE -  3.652776699151979 test adj r2 -  0.09967531440421795 train RMSE -  3.441073933880155
+hist_merch_most_recent_sales_range_min
+test RMSE -  3.6522051906470088 test adj r2 -  0.09995701953160974 train RMSE -  3.4398832260563905
+hist_subsector_id_nunique_-2
+test RMSE -  3.6534891256886426 test adj r2 -  0.09932408694067063 train RMSE -  3.4462268329475423
+new_merch_numerical_2_max
+test RMSE -  3.652395515696838 test adj r2 -  0.09986321035079637 train RMSE -  3.429656779933039
+hist_purchase_amount_max_-3
+test RMSE -  3.6531213189504106 test adj r2 -  0.09950542482521174 train RMSE -  3.45336481210344
+hist_merchant_id_count_-11
+test RMSE -  3.6527528033468686 test adj r2 -  0.09968709388849784 train RMSE -  3.444312879354739
+hist_merch_numerical_2_std
+test RMSE -  3.6528117756164833 test adj r2 -  0.09965802325225026 train RMSE -  3.4258524829992654
+new_purchase_amount_sum_2
+test RMSE -  3.6526340701475233 test adj r2 -  0.09974562251069508 train RMSE -  3.43671331300609
+hist_installments_max_-12
+test RMSE -  3.652287062673568 test adj r2 -  0.09991666628479257 train RMSE -  3.431819788602438
+hist_category_3_A_mean
+test RMSE -  3.6533086165449764 test adj r2 -  0.09941308472654975 train RMSE -  3.4493845020996865
+hist_purchase_amount_std_-5
+test RMSE -  3.653010604961707 test adj r2 -  0.0995600060048506 train RMSE -  3.443949515602238
+hist_purchase_amount_mean_-12
+test RMSE -  3.652487894439673 test adj r2 -  0.09981767609458769 train RMSE -  3.4303520962344827
+hist_purchase_amount_max_-10
+test RMSE -  3.6527372285977293 test adj r2 -  0.09969477145033678 train RMSE -  3.448085675748792
+hist_merchant_category_id_nunique_-6
+test RMSE -  3.653006084105939 test adj r2 -  0.099562234718239 train RMSE -  3.4453746404155465
+hist_purchase_month_max
+test RMSE -  3.6528547220618965 test adj r2 -  0.09963685232024766 train RMSE -  3.4293439543515922
+new_authorized_flag_mean
+test RMSE -  3.6526590349994743 test adj r2 -  0.0997333164358869 train RMSE -  3.4556713203183955
+hist_merch_category_4_mean
+test RMSE -  3.653050184080889 test adj r2 -  0.09954049398106601 train RMSE -  3.4501764280338314
+new_purchase_amount_min_1
+test RMSE -  3.6523993363769196 test adj r2 -  0.09986132712840856 train RMSE -  3.4400092822214896
+new_subsect_tran_ratio
+test RMSE -  3.6529779202741293 test adj r2 -  0.09957611899843666 train RMSE -  3.4330459139928386
+new_purchase_amount_std_2
+test RMSE -  3.652023515275568 test adj r2 -  0.10004656081819785 train RMSE -  3.438679184185085
+merch_purchase_diff_3_4
+test RMSE -  3.653153989527711 test adj r2 -  0.09948931815553896 train RMSE -  3.4623034702901108
+hist_purchase_amount_mean_-7
+test RMSE -  3.6530263986929006 test adj r2 -  0.09955221991304752 train RMSE -  3.4498562966864528
+new_merchant_category_id_nunique_2
+test RMSE -  3.652066555047426 test adj r2 -  0.10002534845809896 train RMSE -  3.4331699625414265
+hist_purchase_amount_std_-7
+test RMSE -  3.653186159958061 test adj r2 -  0.0994734579187081 train RMSE -  3.4452968534078736
+hist_merch_avg_purchases_lag6_min
+test RMSE -  3.6526822440724156 test adj r2 -  0.09972187577235558 train RMSE -  3.430782855420001
+hist_merch_avg_purchases_lag12_min
+test RMSE -  3.6524658956404554 test adj r2 -  0.09982851959148009 train RMSE -  3.434245769513315
+new_merch_active_months_lag12_max
+test RMSE -  3.652499389625365 test adj r2 -  0.0998120099406935 train RMSE -  3.4435181051725388
+hist_merchant_id_count_-8
+test RMSE -  3.6527453290109615 test adj r2 -  0.09969077836131002 train RMSE -  3.43965264055995
+new_merchant_category_id_nunique_1
+test RMSE -  3.652766170009802 test adj r2 -  0.09968050477512658 train RMSE -  3.4488920738841906
+hist_installments_std_-1
+test RMSE -  3.6524336463589275 test adj r2 -  0.0998444155676046 train RMSE -  3.4506589056071846
+hist_merch_numerical_2_max
+test RMSE -  3.6533755600128806 test adj r2 -  0.0993800795961598 train RMSE -  3.463784402846867
+hist_purchase_amount_std_-12
+test RMSE -  3.652990943943117 test adj r2 -  0.09956969856900333 train RMSE -  3.4466788759445883
+diff_purchase_sum_9_8
+test RMSE -  3.6527971706341944 test adj r2 -  0.09966522288537916 train RMSE -  3.446998926222115
+hist_merchant_id_nunique_-13
+test RMSE -  3.6522585390576903 test adj r2 -  0.09993072516383217 train RMSE -  3.431815379374354
+hist_merch_active_months_lag3_max
+test RMSE -  3.652687800864382 test adj r2 -  0.0997191366005804 train RMSE -  3.4570623571592884
+hist_installments_std_-2
+test RMSE -  3.6529125935840723 test adj r2 -  0.09960832351054683 train RMSE -  3.437624070318018
+new_merch_avg_sales_lag6_std
+test RMSE -  3.652886085964524 test adj r2 -  0.09962139097536882 train RMSE -  3.4550077733707782
+hist_merch_avg_purchases_lag12_std
+test RMSE -  3.6526186325629566 test adj r2 -  0.09975323221013288 train RMSE -  3.4374586649675107
+hist_installments_sum_-9
+test RMSE -  3.6523246251538195 test adj r2 -  0.09989815211231612 train RMSE -  3.440044170638734
+hist_merch_active_months_lag12_min
+test RMSE -  3.6524406348101977 test adj r2 -  0.0998409709057354 train RMSE -  3.43238677715415
+diff_purchase_sum_2_1
+test RMSE -  3.652615659179016 test adj r2 -  0.09975469788638403 train RMSE -  3.4309107440014692
+hist_installments_mean_-5
+test RMSE -  3.653212602665742 test adj r2 -  0.0994604213827921 train RMSE -  3.452706610608981
+new_merch_numerical_2_sum
+test RMSE -  3.652334783056608 test adj r2 -  0.09989314535047333 train RMSE -  3.4428779592996017
+new_merch_most_recent_purchases_range_std
+test RMSE -  3.652923329949023 test adj r2 -  0.09960303077627186 train RMSE -  3.440912556477818
+hist_merchant_id_count_-2
+test RMSE -  3.651945981838165 test adj r2 -  0.10008477291768914 train RMSE -  3.4240805824225484
+hist_installments_min_-2
+test RMSE -  3.6528446400285417 test adj r2 -  0.09964182239403918 train RMSE -  3.442193897216556
+hist_installments_mean_-1
+test RMSE -  3.6524282289355714 test adj r2 -  0.09984708585308699 train RMSE -  3.434827845809167
+new_merch_avg_sales_lag3_sum
+test RMSE -  3.6529761882757645 test adj r2 -  0.09957697284007139 train RMSE -  3.454116443398278
+new_purchase_amount_min
+test RMSE -  3.652788454142018 test adj r2 -  0.09966951973040561 train RMSE -  3.4417457034326198
+new_month_lag_nunique
+test RMSE -  3.6528378126694085 test adj r2 -  0.0996451880246575 train RMSE -  3.4481987222608708
+new_installments_max
+test RMSE -  3.6529206000612002 test adj r2 -  0.09960437653777932 train RMSE -  3.4431618779515767
+hist_merchant_category_id_nunique_-11
+test RMSE -  3.6525184874056804 test adj r2 -  0.0998025963115109 train RMSE -  3.446072685056504
+hist_merch_active_months_lag12_max
+test RMSE -  3.652687961255621 test adj r2 -  0.09971905753706634 train RMSE -  3.4570623571592884
+hist_purchase_amount_mean_-13
+test RMSE -  3.652835831067554 test adj r2 -  0.09964616487847511 train RMSE -  3.4472304767031843
+new_hour_nunique
+test RMSE -  3.6530319197581265 test adj r2 -  0.09954949809604385 train RMSE -  3.4503522318095237
+new_category_2_4.0_sum
+test RMSE -  3.652318242084292 test adj r2 -  0.09990129827715433 train RMSE -  3.4323327478046424
+hist_purchase_amount_max_-2
+test RMSE -  3.653388437813875 test adj r2 -  0.09937373038603492 train RMSE -  3.451932923123897
+new_merch_avg_sales_lag12_min
+test RMSE -  3.6524440358883825 test adj r2 -  0.09983929448551754 train RMSE -  3.422216999501432
+new_month_diff_mean
+test RMSE -  3.6524956120981216 test adj r2 -  0.09981387194396052 train RMSE -  3.445330444491824
+purchase_amount_sum_-6
+test RMSE -  3.6527523324098383 test adj r2 -  0.09968732603706187 train RMSE -  3.438637415471799
+hist_installments_min_-10
+test RMSE -  3.65240461743044 test adj r2 -  0.09985872408120267 train RMSE -  3.4294267266252425
+new_merch_avg_purchases_lag12_max
+test RMSE -  3.65293967479951 test adj r2 -  0.09959497318215527 train RMSE -  3.445166773734089
+hist_merch_avg_purchases_lag3_mean
+test RMSE -  3.6529232916541474 test adj r2 -  0.09960304965462585 train RMSE -  3.4409767076854187
+hist_installments_sum_-3
+test RMSE -  3.6527502159509964 test adj r2 -  0.09968836934577441 train RMSE -  3.449499409996639
+hist_weekend_sum
+test RMSE -  3.6524800277351157 test adj r2 -  0.09982155370402468 train RMSE -  3.437507122854432
+hist_purchase_amount_sum_-11
+test RMSE -  3.652320906151442 test adj r2 -  0.09989998518004783 train RMSE -  3.4405840635427665
+hist_merch_avg_purchases_lag3_sum
+test RMSE -  3.6520122234948875 test adj r2 -  0.10005212598562041 train RMSE -  3.4426981828060788
+diff_purchase_lag_mean
+test RMSE -  3.6528510340195144 test adj r2 -  0.0996386703918789 train RMSE -  3.443924600048993
+new_merch_avg_purchases_lag12_std
+test RMSE -  3.651988210059369 test adj r2 -  0.10006396097842463 train RMSE -  3.43299072944352
+hist_merch_most_recent_sales_range_std
+test RMSE -  3.6526390607438306 test adj r2 -  0.09974316247273063 train RMSE -  3.433304092695393
+hist_purchase_amount_sum_-6
+test RMSE -  3.6535114912036617 test adj r2 -  0.09931305959578196 train RMSE -  3.442808223040754
+new_purchase_month_max
+test RMSE -  3.653774356068655 test adj r2 -  0.09918344868923745 train RMSE -  3.460772867935739
+diff_merchant_id_nunique_3_2
+test RMSE -  3.6530319092146852 test adj r2 -  0.09954950329383427 train RMSE -  3.448138817354021
+hist_weekofyear_nunique
+hist_weekofyear_nunique
+test RMSE -  3.652488949064989 test adj r2 -  0.09981715625428578 train RMSE -  3.446603128324786
+purchase_amount_sum_0
+test RMSE -  3.652651761192534 test adj r2 -  0.09973690196602703 train RMSE -  3.4377373475181754
+diff_merchant_id_nunique_2_1
+test RMSE -  3.65330802468557 test adj r2 -  0.09941337652822846 train RMSE -  3.436409971552865
+new_merch_avg_purchases_lag6_min
+test RMSE -  3.652940087169683 test adj r2 -  0.09959476989371863 train RMSE -  3.443117123943248
+hist_purchase_amount_min_-10
+test RMSE -  3.653027371003572 test adj r2 -  0.09955174057618721 train RMSE -  3.450204410967534
+hist_subsect_purchase_sum_ratio
+test RMSE -  3.6526499601629303 test adj r2 -  0.09973778975944259 train RMSE -  3.459997104457384
+hist_installments_sum_-13
+test RMSE -  3.6518525034194607 test adj r2 -  0.10013084237007164 train RMSE -  3.4337511166387187
+new_merch_most_recent_sales_range_max
+test RMSE -  3.652595772116949 test adj r2 -  0.09976450082604782 train RMSE -  3.4487950152729434
+hist_purchase_amount_max_-9
