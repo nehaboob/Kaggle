@@ -1,0 +1,32 @@
+http://www.gfmer.ch/ccdc/pdf/module1.pdf
+
+The cervix represents the lower cylindrical distal portion of the uterus and is divided into: 
+ectocervix/endocervix
+
+The portion of the cervix projecting into the vagina is called portio vaginalis (3cm length).
+The ectocervix - portio vaginalis - is visible during a speculum examination.
+The cervix opens onto the vagina through an orifice called the external os.
+
+
+The cervix contains two kinds of cells: rectangular columnar cells and flat, scale-like squamous cells. Columnar cells are constantly changing into squamous cells in an area of the cervix called the transformation (transitional) zone.
+
+The transformation zone is an area of changing cells, and it is the most common place on the cervix for abnormal cells to develop. These abnormal cells can be detected on a Pap smear.
+
+The location of the transformation zone varies among women. In teenage girls, the transformation zone is on the immature cervix's outer surface and is more susceptible to infection than in adult women. In older women, the transformation zone may be higher in the cervical canal.
+
+https://en.wikipedia.org/wiki/Cervix
+
+The cervix or cervix uteri (Latin: neck of the uterus) is the lower part of the uterus in the human female reproductive system. In a non-pregnant woman, the cervix is usually 2 to 3 cm long (~1 inch) and roughly cylindrical in shape. The narrow, central cervical canal runs along its entire length, connecting the uterine cavity and the lumen of the vagina. The opening into the uterus is called the internal os, and the opening into the vagina is called the external os. The lower part of the cervix, known as the vaginal portion of the cervix (or ectocervix), bulges into the top of the vagina. The cervix has been documented anatomically since at least the time of Hippocrates, over 2,000 years ago.
+
+The cervical canal is a passage through which sperm must travel to fertilize an egg cell after sexual intercourse. Several methods of contraception, including cervical caps and cervical diaphragms aim to block or prevent the passage of sperm through the cervical canal. Cervical mucus is used in several methods of fertility awareness, such as the Creighton model and Billings method, due to its changes in consistency throughout the menstrual period. During vaginal childbirth, the cervix must flatten and dilate to allow the fetus to progress along the birth canal. Midwives and doctors use the extent of the dilation of the cervix to assist decision-making during childbirth.
+
+The cervical canal is lined with a single layer of column-shaped cells, while the ectocervix is covered with multiple layers of cells topped with flat cells. The two types of epithelia meet the squamocolumnar junction. Infection with the human papillomavirus (HPV) can cause changes in the epithelium, which can lead to cancer of the cervix. Cervical cytology tests can often detect cervical cancer and its precursors, and enable early successful treatment.
+
+The squamocolumnar junction: marks the boundary between the squamous-lined ectocervix and the columnar-lined endocervix.
+
+In prepubertal girls, the functional squamocolumnar junction is present just within the cervical canal. Upon entering puberty, due to hormonal influence, and during pregnancy, the columnar epithelium extends outwards over the ectocervix as the cervix everts. Hence, this also causes the squamocolumnar junction to move outwards onto the vaginal portion of the cervix, where it is exposed to the acidic vaginal environment. The exposed columnar epithelium can undergo physiological metaplasia and change to tougher metaplastic squamous epithelium in days or weeks, which is very similar to the original squamous epithelium when mature. The new squamocolumnar junction is therefore internal to the original squamocolumnar junction, and the zone of unstable epithelium between the two junctions is called the transformation zone of the cervix. After menopause, the uterine structures involute and the functional squamocolumnar junction moves into the cervical canal.
+
+
+#Annotating the images with open CV annotation tool
+
+opencv_annotation -images /home/neha/Desktop/code/ML/Kaggle/cevicalC/train_crop/Type_1 -annotations /home/neha/Desktop/code/ML/Kaggle/cevicalC/train_crop/type_1_bb.txt
